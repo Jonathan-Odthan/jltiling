@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios — JLTiling | jltiling.work</title>
+<meta name="description" content="JLTiling ofrece instalación de cerámica, Sheetrock, remodelación interior, reparación de pisos y acabados premium en República Dominicana.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--navy:#0a1628;--navy-mid:#0f2040;--navy-light:#1a3260;--orange:#f97316;--orange-light:#fb923c;--orange-glow:rgba(249,115,22,0.15);--white:#ffffff;--text:#1e293b;--text-light:#64748b;--card-bg:#ffffff;--section-bg:#f8fafc;--border:#e2e8f0;--shadow:0 4px 24px rgba(10,22,40,0.10);--shadow-lg:0 16px 56px rgba(10,22,40,0.16);--radius:16px;--tr:0.35s cubic-bezier(0.4,0,0.2,1)}
+[data-theme="dark"]{--card-bg:#0f2040;--section-bg:#0a1628;--text:#e2e8f0;--text-light:#94a3b8;--border:#1a3260;--white:#080e1c;--shadow:0 4px 24px rgba(0,0,0,0.5);--shadow-lg:0 16px 56px rgba(0,0,0,0.6)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;transition:background var(--tr),color var(--tr)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--section-bg)}::-webkit-scrollbar-thumb{background:var(--orange);border-radius:3px}
+h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:700;line-height:1.15}h1{font-size:clamp(2.2rem,5vw,3.8rem)}h2{font-size:clamp(1.7rem,3.5vw,2.6rem)}h3{font-size:clamp(1rem,2vw,1.2rem)}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+#navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:all 0.4s;padding:1.1rem 0;background:rgba(8,14,28,0.6);backdrop-filter:blur(8px)}
+#navbar.scrolled{background:rgba(8,14,28,0.97);backdrop-filter:blur(14px);padding:0.65rem 0;box-shadow:0 2px 30px rgba(0,0,0,0.35)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.65rem;color:#fff;letter-spacing:-0.5px}.logo em{color:var(--orange);font-style:normal}
+.nav-links{display:flex;gap:0.2rem;list-style:none;align-items:center}.nav-links a{color:rgba(255,255,255,0.8);padding:0.45rem 0.9rem;border-radius:8px;font-size:0.9rem;font-weight:500;transition:all 0.2s}.nav-links a:hover{color:#fff;background:rgba(255,255,255,0.08)}.nav-links a.active{color:var(--orange)}
+.nav-actions{display:flex;align-items:center;gap:0.6rem;flex-shrink:0}
+.btn-lang{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);color:#fff;padding:0.38rem 0.9rem;border-radius:50px;cursor:pointer;font-size:0.82rem;font-weight:600;transition:all 0.2s;font-family:'DM Sans',sans-serif}.btn-lang:hover{background:var(--orange);border-color:var(--orange)}
+.btn-dark{background:none;border:none;color:rgba(255,255,255,0.75);cursor:pointer;font-size:1rem;transition:color 0.2s;padding:0.4rem}.btn-dark:hover{color:var(--orange)}
+.btn-cta-nav{background:var(--orange);color:#fff;padding:0.5rem 1.2rem;border-radius:50px;font-size:0.87rem;font-weight:600;transition:all 0.2s}.btn-cta-nav:hover{background:var(--orange-light);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(8,14,28,0.99);z-index:1100;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}.mobile-menu.open{display:flex}.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem;text-align:center}.mobile-menu ul a{color:rgba(255,255,255,0.85);font-size:1.25rem;font-family:'Syne',sans-serif;font-weight:700;padding:0.5rem 2rem;border-radius:10px;transition:all 0.2s;display:block}.mobile-menu ul a:hover,.mobile-menu ul a.active{color:var(--orange)}
+.mobile-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}.mobile-actions{display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center}
+section{padding:5rem 0}.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section-tag{display:inline-block;color:var(--orange);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.7rem}
+.section-title{color:var(--text);margin-bottom:0.8rem}.section-title span{color:var(--orange)}
+.section-sub{color:var(--text-light);font-size:1rem;line-height:1.75;max-width:640px}
+.section-header{margin-bottom:3rem}.section-header.center{text-align:center}.section-header.center .section-sub{margin:0 auto}
+.divider{width:48px;height:3px;background:var(--orange);border-radius:2px;margin:0.9rem 0}.divider.center{margin:0.9rem auto}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:#fff;padding:0.85rem 1.9rem;border-radius:50px;font-weight:600;font-size:0.93rem;transition:all 0.25s;box-shadow:0 4px 18px rgba(249,115,22,0.35);border:none;cursor:pointer;font-family:'DM Sans',sans-serif}.btn-primary:hover{background:var(--orange-light);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;border:2px solid rgba(255,255,255,0.28);color:#fff;padding:0.85rem 1.9rem;border-radius:50px;font-weight:600;font-size:0.93rem;transition:all 0.25s}.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal-l.visible{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal-r.visible{opacity:1;transform:translateX(0)}
+footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:4.5rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;display:inline-block;margin-bottom:1rem}.footer-logo em{color:var(--orange);font-style:normal}
+.footer-desc{font-size:0.87rem;line-height:1.75;color:rgba(255,255,255,0.45);max-width:290px;margin-bottom:1.5rem}
+.footer-social{display:flex;gap:0.65rem}.social-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;font-size:0.85rem;transition:all 0.2s}.social-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateY(-2px)}
+.footer-col h4{font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:0.88rem;margin-bottom:1.1rem;text-transform:uppercase;letter-spacing:0.8px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.55rem}.footer-links a{color:rgba(255,255,255,0.45);font-size:0.86rem;transition:color 0.2s;display:flex;align-items:center;gap:0.5rem}.footer-links a:hover{color:var(--orange)}.footer-links a i{width:14px;font-size:0.78rem;color:var(--orange);opacity:0.6}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.footer-bottom p{font-size:0.81rem;color:rgba(255,255,255,0.3)}.footer-bottom a{color:var(--orange)}
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,0.5);animation:waBounce 2.5s infinite;transition:transform 0.2s}.whatsapp-float:hover{transform:scale(1.12)!important;animation:none}
+.back-top{position:fixed;bottom:2rem;left:2rem;z-index:500;width:42px;height:42px;background:var(--navy-mid);border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;cursor:pointer;opacity:0;pointer-events:none;transition:all 0.3s}.back-top.visible{opacity:1;pointer-events:auto}.back-top:hover{background:var(--orange);border-color:var(--orange)}
+@keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+/* PAGE HERO */
+.page-hero{min-height:46vh;background:linear-gradient(135deg,#060e1c 0%,#0a1628 50%,#0f2040 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:8rem 2rem 4rem}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(249,115,22,0.08),transparent 60%)}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);background-size:70px 70px}
+.page-hero-img{position:absolute;right:0;top:0;width:45%;height:100%;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80') center/cover no-repeat;opacity:0.15}
+.page-hero-content{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.4);font-size:0.82rem;margin-bottom:1.2rem}.breadcrumb a{color:rgba(255,255,255,0.4);transition:color 0.2s}.breadcrumb a:hover{color:var(--orange)}.breadcrumb .sep{opacity:0.35}
+.page-hero-content h1{color:#fff;max-width:700px;margin-bottom:0.8rem}.page-hero-content h1 em{color:var(--orange);font-style:normal}
+.page-hero-content p{color:rgba(255,255,255,0.6);font-size:1.05rem;max-width:560px;line-height:1.75}
+/* SERVICE DETAIL CARD */
+#services-main{background:var(--white)}
+.srv-detail{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:4rem 0;border-bottom:1px solid var(--border)}
+.srv-detail:last-child{border-bottom:none}
+.srv-detail.reverse{direction:rtl}.srv-detail.reverse > *{direction:ltr}
+.srv-detail-img{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg)}
+.srv-detail-img img{width:100%;height:380px;object-fit:cover;transition:transform 0.6s ease}
+.srv-detail-img:hover img{transform:scale(1.04)}
+.srv-detail-badge{position:absolute;top:1.2rem;left:1.2rem;background:var(--orange);color:#fff;padding:0.4rem 1rem;border-radius:50px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
+.srv-detail-text .srv-num{font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:rgba(249,115,22,0.08);line-height:1;margin-bottom:-0.5rem}
+.srv-detail-text h3{font-size:1.5rem;margin-bottom:0.8rem;color:var(--text)}
+.srv-detail-text h3 span{color:var(--orange)}
+.srv-detail-text .srv-desc{color:var(--text-light);line-height:1.85;font-size:0.97rem;margin-bottom:1.5rem}
+.srv-features{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.8rem}
+.srv-features li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.9rem;color:var(--text-light)}.srv-features li i{color:var(--orange);margin-top:2px;flex-shrink:0}
+.srv-cta-row{display:flex;gap:0.8rem;flex-wrap:wrap}
+.btn-sm{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:#fff;padding:0.7rem 1.5rem;border-radius:50px;font-weight:600;font-size:0.88rem;transition:all 0.25s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}.btn-sm:hover{background:var(--orange-light);transform:translateY(-2px)}
+.btn-sm-outline{display:inline-flex;align-items:center;gap:0.5rem;border:1.5px solid var(--border);color:var(--text-light);padding:0.7rem 1.5rem;border-radius:50px;font-weight:600;font-size:0.88rem;transition:all 0.25s}.btn-sm-outline:hover{border-color:var(--orange);color:var(--orange)}
+/* PRICING */
+#pricing{background:var(--section-bg)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.price-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:2.2rem;transition:all var(--tr);position:relative;overflow:hidden}
+.price-card.featured{border-color:var(--orange);box-shadow:0 0 0 1px var(--orange)}
+.price-card.featured::before{content:'Popular';position:absolute;top:1.2rem;right:-2rem;background:var(--orange);color:#fff;font-size:0.72rem;font-weight:700;padding:0.3rem 3rem;transform:rotate(45deg);text-transform:uppercase;letter-spacing:0.5px}
+.price-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px)}
+.price-icon{width:52px;height:52px;background:var(--orange-glow);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--orange);margin-bottom:1.2rem}
+.price-name{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text);margin-bottom:0.4rem}
+.price-desc{font-size:0.85rem;color:var(--text-light);margin-bottom:1.5rem}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem}
+.price-features li{display:flex;align-items:center;gap:0.6rem;font-size:0.87rem;color:var(--text-light)}.price-features li i{color:var(--orange);font-size:0.8rem;flex-shrink:0}
+/* AREAS */
+#areas{background:var(--navy);padding:4.5rem 0;position:relative;overflow:hidden}
+#areas::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(249,115,22,0.06),transparent 60%)}
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;position:relative;z-index:1}
+.area-item{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:1.3rem;display:flex;align-items:center;gap:0.9rem;transition:all var(--tr)}
+.area-item:hover{background:rgba(249,115,22,0.1);border-color:rgba(249,115,22,0.25)}.area-item i{color:var(--orange);font-size:1.2rem;flex-shrink:0}.area-item span{color:rgba(255,255,255,0.7);font-size:0.9rem;font-weight:500}
+/* CTA */
+#cta-srv{background:linear-gradient(135deg,#0a1628,#1a3260);padding:5rem 0}
+.cta-inner{text-align:center;max-width:600px;margin:0 auto}
+.cta-inner h2{color:#fff;margin-bottom:0.8rem}.cta-inner h2 em{color:var(--orange);font-style:normal}
+.cta-inner p{color:rgba(255,255,255,0.55);margin-bottom:2rem;font-size:1rem;line-height:1.7}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}.pricing-grid{grid-template-columns:1fr 1fr}.areas-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.nav-links,.nav-actions .btn-cta-nav,.nav-actions .btn-dark{display:none}.hamburger{display:flex}section{padding:4rem 0}.srv-detail{grid-template-columns:1fr;gap:2.5rem}.srv-detail.reverse{direction:ltr}.footer-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.areas-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav id="navbar"><div class="nav-inner"><a href="index.html" class="logo">JL<em>Tiling</em></a><ul class="nav-links"><li><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a></li><li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm">Nosotros</a></li><li><a href="services.html" class="active" data-es="Servicios" data-ht="Sèvis">Servicios</a></li><li><a href="galerie.html" data-es="Galería" data-ht="Galri">Galería</a></li><li><a href="contact.html" data-es="Contacto" data-ht="Kontakte">Contacto</a></li></ul><div class="nav-actions"><button class="btn-dark" id="darkToggle"><i class="fas fa-moon"></i></button><button class="btn-lang" id="langToggle">🇭🇹 Kreyòl</button><a href="contact.html" class="btn-cta-nav" data-es="Cotización gratis" data-ht="Devis gratis">Cotización gratis</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></div></nav>
+<div class="mobile-menu" id="mobileMenu"><button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button><ul><li><a href="index.html" data-es="Inicio" data-ht="Akèy" onclick="closeMobile()">Inicio</a></li><li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm" onclick="closeMobile()">Nosotros</a></li><li><a href="services.html" class="active" data-es="Servicios" data-ht="Sèvis" onclick="closeMobile()">Servicios</a></li><li><a href="galerie.html" data-es="Galería" data-ht="Galri" onclick="closeMobile()">Galería</a></li><li><a href="contact.html" data-es="Contacto" data-ht="Kontakte" onclick="closeMobile()">Contacto</a></li></ul><div class="mobile-actions"><button class="btn-lang" id="langToggleMobile">🇭🇹 Kreyòl</button><a href="contact.html" class="btn-primary" onclick="closeMobile()">Cotización gratis</a></div></div>
+<div class="page-hero"><div class="page-hero-grid"></div><div class="page-hero-img"></div><div class="page-hero-content"><div class="breadcrumb"><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a><span class="sep">›</span><span data-es="Servicios" data-ht="Sèvis">Servicios</span></div><h1 data-es="Nuestros <em>Servicios</em>" data-ht="Sèvis <em>nou yo</em>">Nuestros <em>Servicios</em></h1><p data-es="Soluciones profesionales completas para cerámica, Sheetrock, remodelación y acabados." data-ht="Solisyon pwofesyonèl konplè pou seramik, Sheetrock, renovasyon ak finisman.">Soluciones profesionales completas para cerámica, Sheetrock, remodelación y acabados.</p></div></div>
+
+<section id="services-main">
+  <div class="container">
+    <!-- SERVICE 1 -->
+    <div class="srv-detail reveal-l">
+      <div class="srv-detail-img"><div class="srv-detail-badge" data-es="Especialidad #1" data-ht="Espesyalite #1">Especialidad #1</div><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Instalación de cerámica" loading="lazy"></div>
+      <div class="srv-detail-text">
+        <div class="srv-num">01</div>
+        <h3 data-es="Instalación de <span>Cerámica</span>" data-ht="Enstale <span>Seramik</span>">Instalación de <span>Cerámica</span></h3>
+        <p class="srv-desc" data-es="Somos expertos en la instalación de todo tipo de cerámica y porcelanato. Trabajamos con precisión milimétrica para garantizar juntas perfectas, superficies niveladas y un acabado que supera las expectativas. Desde pisos hasta paredes y duchas." data-ht="Nou se ekspè nan enstale tout kalite seramik ak pòselàn. Nou travay ak presiziyon pou garanti jwenti pafè, sifas nivo ak finisman ki depase espektatif yo. Depi atè rive mi ak douch.">Somos expertos en la instalación de todo tipo de cerámica y porcelanato. Trabajamos con precisión milimétrica para garantizar juntas perfectas, superficies niveladas y un acabado que supera las expectativas. Desde pisos hasta paredes y duchas.</p>
+        <ul class="srv-features">
+          <li><i class="fas fa-check"></i><span data-es="Cerámica y porcelanato de todo formato" data-ht="Seramik ak pòselàn tout fòma">Cerámica y porcelanato de todo formato</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Pisos, paredes, baños y cocinas" data-ht="Atè, mi, saldeben ak kwizin">Pisos, paredes, baños y cocinas</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Trabajos en diagonal, rectilíneos o con diseño" data-ht="Travay dyagonal, rèktiliyè oswa ak dizayn">Trabajos en diagonal, rectilíneos o con diseño</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Nivelación y preparación de superficie" data-ht="Niveleman ak preparasyon sifas">Nivelación y preparación de superficie</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Lechada y sellado profesional" data-ht="Koule ak sele pwofesyonèl">Lechada y sellado profesional</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Garantía de instalación incluida" data-ht="Garanti enstalasyon enkli">Garantía de instalación incluida</span></li>
+        </ul>
+        <div class="srv-cta-row"><a href="contact.html" class="btn-sm"><i class="fas fa-file-invoice"></i> <span data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</span></a><a href="galerie.html" class="btn-sm-outline"><i class="fas fa-images"></i> <span data-es="Ver proyectos" data-ht="Wè pwojè">Ver proyectos</span></a></div>
+      </div>
+    </div>
+    <!-- SERVICE 2 -->
+    <div class="srv-detail reverse reveal-r">
+      <div class="srv-detail-img"><div class="srv-detail-badge" data-es="Especialidad #2" data-ht="Espesyalite #2">Especialidad #2</div><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Instalación Sheetrock" loading="lazy"></div>
+      <div class="srv-detail-text">
+        <div class="srv-num">02</div>
+        <h3 data-es="Instalación de <span>Sheetrock</span>" data-ht="Enstale <span>Sheetrock</span>">Instalación de <span>Sheetrock</span></h3>
+        <p class="srv-desc" data-es="Instalamos paneles de yeso (Sheetrock/Placo) para paredes interiores, cielos rasos y divisiones con acabados perfectamente lisos. Técnica impecable que garantiza superficies uniformes listas para pintura o cualquier acabado final." data-ht="Nou enstale panno jips (Sheetrock/Plako) pou mi enteryè, plafon ak separasyon ak finisman pafètman lis. Teknik ireprochab ki garanti sifas inifòm prèt pou penti oswa nenpòt finisman final.">Instalamos paneles de yeso (Sheetrock/Placo) para paredes interiores, cielos rasos y divisiones con acabados perfectamente lisos. Técnica impecable que garantiza superficies uniformes listas para pintura o cualquier acabado final.</p>
+        <ul class="srv-features">
+          <li><i class="fas fa-check"></i><span data-es="Paredes y divisiones interiores" data-ht="Mi ak separasyon enteryè">Paredes y divisiones interiores</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Cielos rasos planos y decorativos" data-ht="Plafon plat ak dekoratif">Cielos rasos planos y decorativos</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Acabado liso o texturizado" data-ht="Finisman lis oswa tekstire">Acabado liso o texturizado</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Instalación de marcos y molduras" data-ht="Enstale kadèt ak mòldire">Instalación de marcos y molduras</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Reparación de juntas y grietas" data-ht="Reparasyon jwenti ak fant">Reparación de juntas y grietas</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Listo para pintura o empapelado" data-ht="Prè pou penti oswa papye mi">Listo para pintura o empapelado</span></li>
+        </ul>
+        <div class="srv-cta-row"><a href="contact.html" class="btn-sm"><i class="fas fa-file-invoice"></i> <span data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</span></a><a href="galerie.html" class="btn-sm-outline"><i class="fas fa-images"></i> <span data-es="Ver proyectos" data-ht="Wè pwojè">Ver proyectos</span></a></div>
+      </div>
+    </div>
+    <!-- SERVICE 3 -->
+    <div class="srv-detail reveal-l">
+      <div class="srv-detail-img"><div class="srv-detail-badge" data-es="Servicio completo" data-ht="Sèvis konplè">Servicio completo</div><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Remodelación interior" loading="lazy"></div>
+      <div class="srv-detail-text">
+        <div class="srv-num">03</div>
+        <h3 data-es="<span>Remodelación</span> Interior" data-ht="Renovasyon <span>Enteryè</span>"><span>Remodelación</span> Interior</h3>
+        <p class="srv-desc" data-es="Transformamos completamente espacios interiores: cocinas, baños, salas y dormitorios. Coordinamos cerámica, Sheetrock, acabados y detalles decorativos para entregar un espacio totalmente renovado según tu visión." data-ht="Nou transfòme espas enteryè nèt: kwizin, saldeben, salon ak chanm. Nou kòdone seramik, Sheetrock, finisman ak detay dekoratif pou livye yon espas nèt renovye selon vizyon ou.">Transformamos completamente espacios interiores: cocinas, baños, salas y dormitorios. Coordinamos cerámica, Sheetrock, acabados y detalles decorativos para entregar un espacio totalmente renovado según tu visión.</p>
+        <ul class="srv-features">
+          <li><i class="fas fa-check"></i><span data-es="Baños y cocinas completas" data-ht="Saldeben ak kwizin konplè">Baños y cocinas completas</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Salas, habitaciones y áreas comunes" data-ht="Salon, chanm ak espas komen">Salas, habitaciones y áreas comunes</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Asesoría en diseño y materiales" data-ht="Konsèy nan dizayn ak materyèl">Asesoría en diseño y materiales</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Coordinación completa del proyecto" data-ht="Kòdinasyon konplè pwojè">Coordinación completa del proyecto</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Gestión de materiales y mano de obra" data-ht="Jestyon materyèl ak men-d-oeuvre">Gestión de materiales y mano de obra</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Entrega limpia y garantizada" data-ht="Livrezon pwòp ak garanti">Entrega limpia y garantizada</span></li>
+        </ul>
+        <div class="srv-cta-row"><a href="contact.html" class="btn-sm"><i class="fas fa-file-invoice"></i> <span data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</span></a></div>
+      </div>
+    </div>
+    <!-- SERVICE 4 -->
+    <div class="srv-detail reverse reveal-r">
+      <div class="srv-detail-img"><div class="srv-detail-badge" data-es="Servicio rápido" data-ht="Sèvis rapid">Servicio rápido</div><img src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800&q=80" alt="Reparación pisos" loading="lazy"></div>
+      <div class="srv-detail-text">
+        <div class="srv-num">04</div>
+        <h3 data-es="Reparación de <span>Pisos</span>" data-ht="Reparasyon <span>Atè</span>">Reparación de <span>Pisos</span></h3>
+        <p class="srv-desc" data-es="Reparamos y restauramos pisos dañados, rotos o desnivelados. Reemplazamos piezas, rellenamos grietas, nivelamos superficies y dejamos el piso como nuevo. Servicio rápido y eficiente con resultados de calidad." data-ht="Nou repare ak restore atè ki domaje, kase oswa dènivle. Nou ranplase pyès, ranpli fant, nivo sifas ak kite atè a tankou nèf. Sèvis rapid ak efikas ak rezilta kalite.">Reparamos y restauramos pisos dañados, rotos o desnivelados. Reemplazamos piezas, rellenamos grietas, nivelamos superficies y dejamos el piso como nuevo. Servicio rápido y eficiente con resultados de calidad.</p>
+        <ul class="srv-features">
+          <li><i class="fas fa-check"></i><span data-es="Reemplazo de piezas dañadas o rotas" data-ht="Ranplasman pyès domaje oswa kase">Reemplazo de piezas dañadas o rotas</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Relleno y sellado de grietas" data-ht="Ranplisman ak sele fant">Relleno y sellado de grietas</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Nivelación de superficies irregulares" data-ht="Niveleman sifas iregilye">Nivelación de superficies irregulares</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Igualdad de color y textura" data-ht="Egalite koulè ak tèksti">Igualdad de color y textura</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Mínima interrupción del espacio" data-ht="Minimòm entèripsyon espas">Mínima interrupción del espacio</span></li>
+        </ul>
+        <div class="srv-cta-row"><a href="contact.html" class="btn-sm"><i class="fas fa-file-invoice"></i> <span data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag reveal" data-es="Transparencia en precios" data-ht="Transparan nan pri">Transparencia en precios</span>
+      <h2 class="section-title reveal" data-es="Tipos de <span>Proyectos</span>" data-ht="Kalite <span>Pwojè</span>">Tipos de <span>Proyectos</span></h2>
+      <div class="divider center reveal"></div>
+      <p class="section-sub reveal" data-es="Adaptamos nuestros servicios a cada necesidad. Consulta sin compromiso para obtener tu precio exacto." data-ht="Nou adapte sèvis nou yo pou chak bezwen. Konsèy san angajman pou jwenn pri egzak ou.">Adaptamos nuestros servicios a cada necesidad. Consulta sin compromiso para obtener tu precio exacto.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-icon"><i class="fas fa-home"></i></div>
+        <div class="price-name" data-es="Proyecto Pequeño" data-ht="Ti Pwojè">Proyecto Pequeño</div>
+        <div class="price-desc" data-es="Baños, habitaciones individuales o reparaciones puntuales." data-ht="Saldeben, chanm endividyèl oswa reparasyon pwen.">Baños, habitaciones individuales o reparaciones puntuales.</div>
+        <ul class="price-features">
+          <li><i class="fas fa-check"></i><span data-es="Hasta 30m² de trabajo" data-ht="Jiska 30m² travay">Hasta 30m² de trabajo</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Cerámica o Sheetrock" data-ht="Seramik oswa Sheetrock">Cerámica o Sheetrock</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Entrega en 2-5 días" data-ht="Livrezon nan 2-5 jou">Entrega en 2-5 días</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Cotización gratis" data-ht="Devis gratis">Cotización gratis</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Garantía incluida" data-ht="Garanti enkli">Garantía incluida</span></li>
+        </ul>
+        <a href="contact.html" class="btn-sm" style="width:100%;justify-content:center" data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</a>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="price-icon"><i class="fas fa-building"></i></div>
+        <div class="price-name" data-es="Proyecto Mediano" data-ht="Pwojè Mwayèn">Proyecto Mediano</div>
+        <div class="price-desc" data-es="Cocinas, salas o apartamentos completos con varios servicios." data-ht="Kwizin, salon oswa appatman konplè ak plizyè sèvis.">Cocinas, salas o apartamentos completos con varios servicios.</div>
+        <ul class="price-features">
+          <li><i class="fas fa-check"></i><span data-es="30m² a 100m² de trabajo" data-ht="30m² a 100m² travay">30m² a 100m² de trabajo</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Cerámica + Sheetrock combinados" data-ht="Seramik + Sheetrock konbine">Cerámica + Sheetrock combinados</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Entrega en 1-2 semanas" data-ht="Livrezon nan 1-2 semèn">Entrega en 1-2 semanas</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Asesoría en diseño incluida" data-ht="Konsèy dizayn enkli">Asesoría en diseño incluida</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Gestión completa del proyecto" data-ht="Jestyon konplè pwojè">Gestión completa del proyecto</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Garantía extendida" data-ht="Garanti elaji">Garantía extendida</span></li>
+        </ul>
+        <a href="contact.html" class="btn-sm" style="width:100%;justify-content:center" data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-icon"><i class="fas fa-city"></i></div>
+        <div class="price-name" data-es="Proyecto Grande" data-ht="Gwo Pwojè">Proyecto Grande</div>
+        <div class="price-desc" data-es="Casas completas, locales comerciales o edificios de varios pisos." data-ht="Kay konplè, lokal komèsyal oswa bilding plizyè etaj.">Casas completas, locales comerciales o edificios de varios pisos.</div>
+        <ul class="price-features">
+          <li><i class="fas fa-check"></i><span data-es="Más de 100m² de trabajo" data-ht="Plis pase 100m² travay">Más de 100m² de trabajo</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Servicios completos integrales" data-ht="Sèvis konplè entegral">Servicios completos integrales</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Plan de trabajo detallado" data-ht="Plan travay detaye">Plan de trabajo detallado</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Equipo dedicado al proyecto" data-ht="Ekip dedye pou pwojè">Equipo dedicado al proyecto</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Supervisión personal de Jonathan" data-ht="Sipèvizyon pèsonèl Jonathan">Supervisión personal de Jonathan</span></li>
+          <li><i class="fas fa-check"></i><span data-es="Precio especial negociado" data-ht="Pri espesyal negosye">Precio especial negociado</span></li>
+        </ul>
+        <a href="contact.html" class="btn-sm" style="width:100%;justify-content:center" data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section id="areas">
+  <div class="container">
+    <div class="section-header center" style="margin-bottom:2.5rem">
+      <span class="section-tag reveal" style="color:var(--orange)" data-es="Cobertura" data-ht="Kouvèti">Cobertura</span>
+      <h2 class="section-title reveal" style="color:#fff" data-es="Zonas de <span>Servicio</span>" data-ht="Zòn <span>Sèvis</span>">Zonas de <span>Servicio</span></h2>
+      <div class="divider center reveal"></div>
+    </div>
+    <div class="areas-grid">
+      <div class="area-item reveal"><i class="fas fa-map-marker-alt"></i><span>Santo Domingo</span></div>
+      <div class="area-item reveal"><i class="fas fa-map-marker-alt"></i><span>Santiago</span></div>
+      <div class="area-item reveal"><i class="fas fa-map-marker-alt"></i><span>La Romana</span></div>
+      <div class="area-item reveal"><i class="fas fa-map-marker-alt"></i><span>San Pedro de Macorís</span></div>
+      <div class="area-item reveal"><i class="fas fa-map-marker-alt"></i><span>Puerto Plata</span></div>
+      <div class="area-item reveal"><i class="fas fa-map-marker-alt"></i><span>La Vega</span></div>
+      <div class="area-item reveal"><i class="fas fa-map-marker-alt"></i><span>San Cristóbal</span></div>
+      <div class="area-item reveal"><i class="fas fa-map-marker-alt"></i><span data-es="Zona metropolitana" data-ht="Zòn mètwopoliten">Zona metropolitana</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-srv">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2 data-es="¿Tienes un proyecto en <em>mente</em>?" data-ht="Ou gen yon pwojè nan <em>tèt ou</em>?">¿Tienes un proyecto en <em>mente</em>?</h2>
+      <p data-es="Cuéntanos qué necesitas y te enviamos una cotización gratuita y detallada." data-ht="Di nou sa ou bezwen ak nou voye yon devis gratis ak detaye ba ou.">Cuéntanos qué necesitas y te enviamos una cotización gratuita y detallada.</p>
+      <div class="cta-btns"><a href="contact.html" class="btn-primary"><i class="fas fa-paper-plane"></i> <span data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</span></a><a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="btn-ghost" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+<footer><div class="container"><div class="footer-grid"><div><a href="index.html" class="footer-logo">JL<em>Tiling</em></a><p class="footer-desc" data-es="Jonathan Louis — Servicios profesionales de Cerámica y Sheetrock." data-ht="Jonathan Louis — Sèvis pwofesyonèl Seramik ak Sheetrock.">Jonathan Louis — Servicios profesionales de Cerámica y Sheetrock.</p><div class="footer-social"><a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-btn"><i class="fab fa-instagram"></i></a><a href="https://wa.me/50940894038" class="social-btn" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div><div class="footer-col"><h4 data-es="Páginas" data-ht="Paj yo">Páginas</h4><ul class="footer-links"><li><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a></li><li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm">Nosotros</a></li><li><a href="services.html" data-es="Servicios" data-ht="Sèvis">Servicios</a></li><li><a href="galerie.html" data-es="Galería" data-ht="Galri">Galería</a></li><li><a href="contact.html" data-es="Contacto" data-ht="Kontakte">Contacto</a></li></ul></div><div class="footer-col"><h4 data-es="Servicios" data-ht="Sèvis">Servicios</h4><ul class="footer-links"><li><a href="services.html">Cerámica</a></li><li><a href="services.html">Sheetrock</a></li><li><a href="services.html" data-es="Remodelación" data-ht="Renovasyon">Remodelación</a></li><li><a href="services.html" data-es="Reparaciones" data-ht="Reparasyon">Reparaciones</a></li></ul></div><div class="footer-col"><h4 data-es="Contacto" data-ht="Kontakte">Contacto</h4><ul class="footer-links"><li><a href="tel:+50940894038"><i class="fas fa-phone"></i> +509 4089 4038</a></li><li><a href="mailto:juntanluyis@gmail.com"><i class="fas fa-envelope"></i> juntanluyis@gmail.com</a></li></ul></div></div><div class="footer-bottom"><p>© 2026 <a href="index.html">JLtiling</a> — <span data-es="Todos los derechos reservados." data-ht="Tout dwa rezève.">Todos los derechos reservados.</span></p><p><a href="https://jltiling.work">jltiling.work</a></p></div></div></footer>
+<a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
+<script>
+let lang=localStorage.getItem('jl_lang')||'es';
+function applyLang(l){lang=l;localStorage.setItem('jl_lang',l);document.querySelectorAll('[data-es]').forEach(el=>{const v=el.getAttribute('data-'+l);if(!v)return;if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=v;return;}if(el.tagName==='OPTION'){el.textContent=v;return;}el.innerHTML=v;});['langToggle','langToggleMobile'].forEach(id=>{const b=document.getElementById(id);if(b)b.textContent=l==='es'?'🇭🇹 Kreyòl':'🇩🇴 Español';});}
+['langToggle','langToggleMobile'].forEach(id=>{const b=document.getElementById(id);if(b)b.addEventListener('click',()=>applyLang(lang==='es'?'ht':'es'));});
+applyLang(lang);
+const dt=document.getElementById('darkToggle');const st=localStorage.getItem('jl_theme')||'light';document.documentElement.setAttribute('data-theme',st);if(dt){dt.innerHTML=st==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';dt.addEventListener('click',()=>{const d=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',d?'light':'dark');localStorage.setItem('jl_theme',d?'light':'dark');dt.innerHTML=d?'<i class="fas fa-moon"></i>':'<i class="fas fa-sun"></i>';});}
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);const bt=document.getElementById('backTop');if(bt)bt.classList.toggle('visible',window.scrollY>400);});
+document.getElementById('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click',()=>closeMobile());
+function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
+const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');obs.unobserve(en.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach((el,i)=>{el.style.transitionDelay=Math.min(i%4*0.1,0.4)+'s';obs.observe(el);});
+</script>
+</body></html>

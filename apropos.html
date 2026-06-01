@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros — JLTiling | jltiling.work</title>
+<meta name="description" content="Conoce a JLTiling: más de 8 años de experiencia en instalación de cerámica y Sheetrock en República Dominicana. Profesionalismo, calidad y confianza.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--navy:#0a1628;--navy-mid:#0f2040;--navy-light:#1a3260;--orange:#f97316;--orange-light:#fb923c;--orange-glow:rgba(249,115,22,0.15);--white:#ffffff;--text:#1e293b;--text-light:#64748b;--card-bg:#ffffff;--section-bg:#f8fafc;--border:#e2e8f0;--shadow:0 4px 24px rgba(10,22,40,0.10);--shadow-lg:0 16px 56px rgba(10,22,40,0.16);--radius:16px;--tr:0.35s cubic-bezier(0.4,0,0.2,1)}
+[data-theme="dark"]{--card-bg:#0f2040;--section-bg:#0a1628;--text:#e2e8f0;--text-light:#94a3b8;--border:#1a3260;--white:#080e1c;--shadow:0 4px 24px rgba(0,0,0,0.5);--shadow-lg:0 16px 56px rgba(0,0,0,0.6)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;transition:background var(--tr),color var(--tr)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--section-bg)}::-webkit-scrollbar-thumb{background:var(--orange);border-radius:3px}
+h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:700;line-height:1.15}
+h1{font-size:clamp(2.2rem,5vw,3.8rem)}h2{font-size:clamp(1.7rem,3.5vw,2.6rem)}h3{font-size:clamp(1rem,2vw,1.2rem)}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+#navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:all 0.4s;padding:1.1rem 0;background:rgba(8,14,28,0.6);backdrop-filter:blur(8px)}
+#navbar.scrolled{background:rgba(8,14,28,0.97);backdrop-filter:blur(14px);padding:0.65rem 0;box-shadow:0 2px 30px rgba(0,0,0,0.35)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.65rem;color:#fff;letter-spacing:-0.5px}.logo em{color:var(--orange);font-style:normal}
+.nav-links{display:flex;gap:0.2rem;list-style:none;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);padding:0.45rem 0.9rem;border-radius:8px;font-size:0.9rem;font-weight:500;transition:all 0.2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,0.08)}.nav-links a.active{color:var(--orange)}
+.nav-actions{display:flex;align-items:center;gap:0.6rem;flex-shrink:0}
+.btn-lang{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);color:#fff;padding:0.38rem 0.9rem;border-radius:50px;cursor:pointer;font-size:0.82rem;font-weight:600;transition:all 0.2s;font-family:'DM Sans',sans-serif}.btn-lang:hover{background:var(--orange);border-color:var(--orange)}
+.btn-dark{background:none;border:none;color:rgba(255,255,255,0.75);cursor:pointer;font-size:1rem;transition:color 0.2s;padding:0.4rem}.btn-dark:hover{color:var(--orange)}
+.btn-cta-nav{background:var(--orange);color:#fff;padding:0.5rem 1.2rem;border-radius:50px;font-size:0.87rem;font-weight:600;transition:all 0.2s}.btn-cta-nav:hover{background:var(--orange-light);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(8,14,28,0.99);z-index:1100;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
+.mobile-menu.open{display:flex}.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem;text-align:center}
+.mobile-menu ul a{color:rgba(255,255,255,0.85);font-size:1.25rem;font-family:'Syne',sans-serif;font-weight:700;padding:0.5rem 2rem;border-radius:10px;transition:all 0.2s;display:block}.mobile-menu ul a:hover,.mobile-menu ul a.active{color:var(--orange)}
+.mobile-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.mobile-actions{display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center}
+section{padding:5rem 0}.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section-tag{display:inline-block;color:var(--orange);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.7rem}
+.section-title{color:var(--text);margin-bottom:0.8rem}.section-title span{color:var(--orange)}
+.section-sub{color:var(--text-light);font-size:1rem;line-height:1.75;max-width:640px}
+.section-header{margin-bottom:3rem}.section-header.center{text-align:center}.section-header.center .section-sub{margin:0 auto}
+.divider{width:48px;height:3px;background:var(--orange);border-radius:2px;margin:0.9rem 0}.divider.center{margin:0.9rem auto}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:#fff;padding:0.85rem 1.9rem;border-radius:50px;font-weight:600;font-size:0.93rem;transition:all 0.25s;box-shadow:0 4px 18px rgba(249,115,22,0.35);border:none;cursor:pointer;font-family:'DM Sans',sans-serif}.btn-primary:hover{background:var(--orange-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,0.45)}
+.btn-outline{display:inline-flex;align-items:center;gap:0.5rem;border:2px solid var(--orange);color:var(--orange);padding:0.85rem 1.9rem;border-radius:50px;font-weight:600;font-size:0.93rem;transition:all 0.25s;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif}.btn-outline:hover{background:var(--orange);color:#fff;transform:translateY(-2px)}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal-l.visible{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal-r.visible{opacity:1;transform:translateX(0)}
+footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:4.5rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;display:inline-block;margin-bottom:1rem}.footer-logo em{color:var(--orange);font-style:normal}
+.footer-desc{font-size:0.87rem;line-height:1.75;color:rgba(255,255,255,0.45);max-width:290px;margin-bottom:1.5rem}
+.footer-social{display:flex;gap:0.65rem}
+.social-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;font-size:0.85rem;transition:all 0.2s}.social-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateY(-2px)}
+.footer-col h4{font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:0.88rem;margin-bottom:1.1rem;text-transform:uppercase;letter-spacing:0.8px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.55rem}.footer-links a{color:rgba(255,255,255,0.45);font-size:0.86rem;transition:color 0.2s;display:flex;align-items:center;gap:0.5rem}.footer-links a:hover{color:var(--orange)}.footer-links a i{width:14px;font-size:0.78rem;color:var(--orange);opacity:0.6}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.footer-bottom p{font-size:0.81rem;color:rgba(255,255,255,0.3)}.footer-bottom a{color:var(--orange)}
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,0.5);animation:waBounce 2.5s infinite;transition:transform 0.2s}.whatsapp-float:hover{transform:scale(1.12)!important;animation:none}
+.back-top{position:fixed;bottom:2rem;left:2rem;z-index:500;width:42px;height:42px;background:var(--navy-mid);border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;cursor:pointer;opacity:0;pointer-events:none;transition:all 0.3s}.back-top.visible{opacity:1;pointer-events:auto}.back-top:hover{background:var(--orange);border-color:var(--orange)}
+@keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+/* PAGE HERO */
+.page-hero{min-height:46vh;background:linear-gradient(135deg,#060e1c 0%,#0a1628 50%,#0f2040 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:8rem 2rem 4rem}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(249,115,22,0.08),transparent 60%)}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);background-size:70px 70px}
+.page-hero-img{position:absolute;right:0;top:0;width:45%;height:100%;background:url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=900&q=80') center/cover no-repeat;opacity:0.18}
+.page-hero-content{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.4);font-size:0.82rem;margin-bottom:1.2rem}
+.breadcrumb a{color:rgba(255,255,255,0.4);transition:color 0.2s}.breadcrumb a:hover{color:var(--orange)}.breadcrumb .sep{opacity:0.35}
+.page-hero-content h1{color:#fff;max-width:700px;margin-bottom:0.8rem}.page-hero-content h1 em{color:var(--orange);font-style:normal}
+.page-hero-content p{color:rgba(255,255,255,0.6);font-size:1.05rem;max-width:560px;line-height:1.75}
+/* INTRO */
+#intro{background:var(--white)}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.intro-img-wrap{position:relative}
+.intro-main-img{width:100%;height:460px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-lg)}
+.intro-accent-img{position:absolute;bottom:-2.5rem;right:-2.5rem;width:210px;height:170px;object-fit:cover;border-radius:12px;border:4px solid var(--white);box-shadow:var(--shadow-lg)}
+.intro-badge{position:absolute;top:-1.5rem;left:-1.5rem;background:var(--orange);color:#fff;padding:1.1rem 1.5rem;border-radius:14px;font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;line-height:1.1;box-shadow:0 8px 24px rgba(249,115,22,0.45);text-align:center}
+.intro-badge small{font-size:0.65rem;font-weight:500;display:block;opacity:0.85;text-transform:uppercase;letter-spacing:0.5px;margin-top:0.1rem}
+.intro-text p{color:var(--text-light);line-height:1.85;margin-bottom:1.2rem;font-size:0.98rem}
+.intro-checks{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:1.8rem 0}
+.check-item{display:flex;align-items:center;gap:0.65rem;font-size:0.9rem;color:var(--text-light)}
+.check-item i{color:var(--orange);font-size:0.85rem;flex-shrink:0;width:16px}
+.intro-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+/* MISSION/VISION/VALUES */
+#mvv{background:var(--section-bg)}
+.mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.mvv-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:2.2rem;position:relative;overflow:hidden;transition:all var(--tr)}
+.mvv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--orange);transform:scaleX(0);transition:transform 0.3s;transform-origin:left}
+.mvv-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px)}.mvv-card:hover::before{transform:scaleX(1)}
+.mvv-icon{width:58px;height:58px;background:var(--orange-glow);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--orange);margin-bottom:1.3rem;transition:all var(--tr)}
+.mvv-card:hover .mvv-icon{background:var(--orange);color:#fff}
+.mvv-card h3{font-size:1.05rem;margin-bottom:0.7rem;color:var(--text)}
+.mvv-card p{font-size:0.88rem;color:var(--text-light);line-height:1.75}
+/* STATS */
+#stats-band{background:var(--navy);padding:4rem 0;position:relative;overflow:hidden}
+#stats-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(249,115,22,0.07),transparent 60%)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative;z-index:1}
+.stat-box{text-align:center;padding:2rem 1rem;border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);background:rgba(255,255,255,0.03);transition:all var(--tr)}
+.stat-box:hover{background:rgba(249,115,22,0.08);border-color:rgba(249,115,22,0.2)}
+.stat-box .num{font-family:'Syne',sans-serif;font-size:2.8rem;font-weight:800;color:#fff;line-height:1}
+.stat-box .num em{color:var(--orange);font-style:normal}
+.stat-box .lbl{font-size:0.82rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.8px;margin-top:0.5rem}
+/* TEAM / FOUNDER */
+#founder{background:var(--white)}
+.founder-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:center}
+.founder-img-wrap{position:relative}
+.founder-img{width:100%;height:500px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-lg)}
+.founder-tag{position:absolute;bottom:-1.5rem;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:0.9rem 2rem;border-radius:50px;font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;white-space:nowrap;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:0.6rem}
+.founder-tag i{color:var(--orange)}
+.founder-text h2{margin-bottom:0.5rem}.founder-text h2 em{color:var(--orange);font-style:normal}
+.founder-text .founder-role{color:var(--orange);font-weight:600;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:1.5rem;display:block}
+.founder-text p{color:var(--text-light);line-height:1.85;font-size:0.98rem;margin-bottom:1.1rem}
+.founder-skills{display:flex;flex-wrap:wrap;gap:0.6rem;margin:1.5rem 0}
+.skill-tag{background:var(--orange-glow);border:1px solid rgba(249,115,22,0.25);color:var(--orange);padding:0.38rem 0.9rem;border-radius:50px;font-size:0.82rem;font-weight:600}
+.founder-contacts{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.contact-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.4rem;border-radius:50px;font-size:0.88rem;font-weight:600;transition:all 0.2s}
+.contact-btn.wa{background:#25d366;color:#fff;box-shadow:0 4px 14px rgba(37,211,102,0.35)}.contact-btn.wa:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,0.45)}
+.contact-btn.tel{background:var(--orange-glow);border:1px solid rgba(249,115,22,0.3);color:var(--orange)}.contact-btn.tel:hover{background:var(--orange);color:#fff}
+/* VALUES LIST */
+#values{background:var(--section-bg)}
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.value-item{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.8rem;display:flex;gap:1.2rem;align-items:flex-start;transition:all var(--tr)}
+.value-item:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:rgba(249,115,22,0.25)}
+.value-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:rgba(249,115,22,0.15);line-height:1;flex-shrink:0;width:50px}
+.value-content h4{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.4rem}
+.value-content p{font-size:0.87rem;color:var(--text-light);line-height:1.65}
+/* PROCESS */
+#process{background:var(--navy);position:relative;overflow:hidden}
+#process::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 90% 10%,rgba(249,115,22,0.07),transparent 50%)}
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;position:relative;z-index:1}
+.process-steps::before{content:'';position:absolute;top:40px;left:10%;right:10%;height:2px;background:linear-gradient(to right,var(--orange),rgba(249,115,22,0.2));z-index:0}
+.step{text-align:center;position:relative;z-index:1}
+.step-num{width:80px;height:80px;border-radius:50%;background:var(--navy-mid);border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--orange);transition:all var(--tr);position:relative;z-index:2}
+.step:hover .step-num{background:var(--orange);color:#fff;border-color:var(--orange)}
+.step h4{color:#fff;font-size:0.9rem;margin-bottom:0.4rem}
+.step p{color:rgba(255,255,255,0.45);font-size:0.8rem;line-height:1.55}
+/* CTA */
+#cta-ap{background:linear-gradient(135deg,#0a1628,#1a3260);padding:5rem 0}
+.cta-ap-inner{text-align:center;max-width:600px;margin:0 auto}
+.cta-ap-inner h2{color:#fff;margin-bottom:0.8rem}.cta-ap-inner h2 em{color:var(--orange);font-style:normal}
+.cta-ap-inner p{color:rgba(255,255,255,0.55);margin-bottom:2rem;font-size:1rem;line-height:1.7}
+.cta-ap-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;border:2px solid rgba(255,255,255,0.28);color:#fff;padding:0.85rem 1.9rem;border-radius:50px;font-weight:600;font-size:0.93rem;transition:all 0.25s}.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+@media(max-width:1024px){.stats-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:768px){
+  .nav-links,.nav-actions .btn-cta-nav,.nav-actions .btn-dark{display:none}.hamburger{display:flex}
+  section{padding:4rem 0}.intro-grid,.founder-grid{grid-template-columns:1fr}.intro-accent-img{display:none}
+  .mvv-grid,.values-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr 1fr;gap:2rem}.process-steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr}.founder-img{height:320px}
+}
+@media(max-width:480px){.process-steps{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">JL<em>Tiling</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a></li>
+      <li><a href="apropos.html" class="active" data-es="Nosotros" data-ht="Nou menm">Nosotros</a></li>
+      <li><a href="services.html" data-es="Servicios" data-ht="Sèvis">Servicios</a></li>
+      <li><a href="galerie.html" data-es="Galería" data-ht="Galri">Galería</a></li>
+      <li><a href="contact.html" data-es="Contacto" data-ht="Kontakte">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-dark" id="darkToggle"><i class="fas fa-moon"></i></button>
+      <button class="btn-lang" id="langToggle">🇭🇹 Kreyòl</button>
+      <a href="contact.html" class="btn-cta-nav" data-es="Cotización gratis" data-ht="Devis gratis">Cotización gratis</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+  <ul>
+    <li><a href="index.html" data-es="Inicio" data-ht="Akèy" onclick="closeMobile()">Inicio</a></li>
+    <li><a href="apropos.html" class="active" data-es="Nosotros" data-ht="Nou menm" onclick="closeMobile()">Nosotros</a></li>
+    <li><a href="services.html" data-es="Servicios" data-ht="Sèvis" onclick="closeMobile()">Servicios</a></li>
+    <li><a href="galerie.html" data-es="Galería" data-ht="Galri" onclick="closeMobile()">Galería</a></li>
+    <li><a href="contact.html" data-es="Contacto" data-ht="Kontakte" onclick="closeMobile()">Contacto</a></li>
+  </ul>
+  <div class="mobile-actions">
+    <button class="btn-lang" id="langToggleMobile">🇭🇹 Kreyòl</button>
+    <a href="contact.html" class="btn-primary" onclick="closeMobile()">Cotización gratis</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-img"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a><span class="sep">›</span><span data-es="Nosotros" data-ht="Nou menm">Nosotros</span></div>
+    <h1 data-es="Sobre <em>JLTiling</em>" data-ht="Sou <em>JLTiling</em>">Sobre <em>JLTiling</em></h1>
+    <p data-es="Más de 8 años transformando espacios con profesionalismo, calidad y compromiso total." data-ht="Plis pase 8 ane ap transfòme espas ak pwofesyonalis, kalite ak angajman total.">Más de 8 años transformando espacios con profesionalismo, calidad y compromiso total.</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section id="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-img-wrap reveal-l">
+        <div class="intro-badge">8+<small data-es="Años exp." data-ht="Ane exp.">Años exp.</small></div>
+        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&q=80" alt="JLTiling equipo profesional" class="intro-main-img" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Instalación cerámica" class="intro-accent-img" loading="lazy">
+      </div>
+      <div class="intro-text reveal-r">
+        <span class="section-tag" data-es="Quiénes somos" data-ht="Ki nou ye">Quiénes somos</span>
+        <h2 class="section-title" data-es="La empresa de <span>confianza</span> para tu proyecto" data-ht="Antrepriz <span>konfyans</span> pou pwojè ou">La empresa de <span>confianza</span> para tu proyecto</h2>
+        <div class="divider"></div>
+        <p data-es="JLTiling es una empresa especializada en instalación de cerámica, Sheetrock y acabados interiores con más de 8 años de experiencia en la República Dominicana. Fundada por Jonathan Louis, nuestra empresa nació de la pasión por la construcción y el compromiso con la excelencia en cada trabajo." data-ht="JLTiling se yon antrepriz espesyalize nan enstale seramik, Sheetrock ak finisman enteryè ak plis pase 8 ane eksperyans nan Repiblik Dominikèn. Fonde pa Jonathan Louis, antrepriz nou an te fèt nan pasyon pou konstriksyon ak angajman ak ekselans nan chak travay.">JLTiling es una empresa especializada en instalación de cerámica, Sheetrock y acabados interiores con más de 8 años de experiencia en la República Dominicana. Fundada por Jonathan Louis, nuestra empresa nació de la pasión por la construcción y el compromiso con la excelencia en cada trabajo.</p>
+        <p data-es="Trabajamos con propietarios de hogares, empresas y contratistas para ofrecer resultados duraderos y elegantes. Cada proyecto es tratado con la misma dedicación y atención al detalle, sin importar el tamaño o el presupuesto." data-ht="Nou travay ak pwopriyetè kay, antrepriz ak kontraktè pou ofri rezilta dirab ak eleganis. Chak pwojè trete ak menm dedikasyon ak atansyon nan detay, kèlkeswa gwosè oswa bidjè.">Trabajamos con propietarios de hogares, empresas y contratistas para ofrecer resultados duraderos y elegantes. Cada proyecto es tratado con la misma dedicación y atención al detalle, sin importar el tamaño o el presupuesto.</p>
+        <p data-es="Nuestra filosofía es simple: hacer las cosas bien desde la primera vez, cumplir con los compromisos y dejar a cada cliente completamente satisfecho con el resultado final." data-ht="Filozofi nou senp: fè bagay yo byen depi premye fwa, respekte angajman yo ak kite chak kliyan konplètman satisfè ak rezilta final la.">Nuestra filosofía es simple: hacer las cosas bien desde la primera vez, cumplir con los compromisos y dejar a cada cliente completamente satisfecho con el resultado final.</p>
+        <div class="intro-checks">
+          <div class="check-item"><i class="fas fa-check-circle"></i><span data-es="Licenciados y asegurados" data-ht="Lisansye ak asirans">Licenciados y asegurados</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span data-es="Presupuesto sin costo" data-ht="Devis gratis">Presupuesto sin costo</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span data-es="Garantía en cada trabajo" data-ht="Garanti sou chak travay">Garantía en cada trabajo</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span data-es="Atención personalizada" data-ht="Atansyon pèsonalize">Atención personalizada</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span data-es="Puntualidad garantizada" data-ht="Ponktiyalite garanti">Puntualidad garantizada</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span data-es="Limpieza del área de trabajo" data-ht="Pwòpte zòn travay">Limpieza del área de trabajo</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span data-es="Materiales de primera calidad" data-ht="Materyèl premye kalite">Materiales de primera calidad</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span data-es="Resultados duraderos" data-ht="Rezilta dirab">Resultados duraderos</span></div>
+        </div>
+        <div class="intro-btns">
+          <a href="contact.html" class="btn-primary"><i class="fas fa-file-invoice"></i> <span data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</span></a>
+          <a href="galerie.html" class="btn-outline"><i class="fas fa-images"></i> <span data-es="Ver galería" data-ht="Wè galri">Ver galería</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box reveal"><div class="num">8<em>+</em></div><div class="lbl" data-es="Años de experiencia" data-ht="Ane eksperyans">Años de experiencia</div></div>
+      <div class="stat-box reveal"><div class="num">300<em>+</em></div><div class="lbl" data-es="Proyectos completados" data-ht="Pwojè fini">Proyectos completados</div></div>
+      <div class="stat-box reveal"><div class="num">150<em>+</em></div><div class="lbl" data-es="Clientes satisfechos" data-ht="Kliyan satisfè">Clientes satisfechos</div></div>
+      <div class="stat-box reveal"><div class="num">100<em>%</em></div><div class="lbl" data-es="Satisfacción garantizada" data-ht="Satisfaksyon garanti">Satisfacción garantizada</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION / VISION / VALUES -->
+<section id="mvv">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag reveal" data-es="Nuestra esencia" data-ht="Esans nou">Nuestra esencia</span>
+      <h2 class="section-title reveal" data-es="Misión, Visión y <span>Valores</span>" data-ht="Misyon, Vizyon ak <span>Valè</span>">Misión, Visión y <span>Valores</span></h2>
+      <div class="divider center reveal"></div>
+    </div>
+    <div class="mvv-grid">
+      <div class="mvv-card reveal">
+        <div class="mvv-icon"><i class="fas fa-bullseye"></i></div>
+        <h3 data-es="Nuestra Misión" data-ht="Misyon nou">Nuestra Misión</h3>
+        <p data-es="Ofrecer servicios de instalación de cerámica, Sheetrock y acabados interiores de la más alta calidad, transformando espacios con precisión, responsabilidad y dedicación. Buscamos superar las expectativas de cada cliente en cada proyecto que realizamos." data-ht="Ofri sèvis enstale seramik, Sheetrock ak finisman enteryè ki pi wo kalite a, transfòme espas ak presiziyon, responsabilite ak dedikasyon. Nou chèche depase espektatif chak kliyan nan chak pwojè nou fè.">Ofrecer servicios de instalación de cerámica, Sheetrock y acabados interiores de la más alta calidad, transformando espacios con precisión, responsabilidad y dedicación. Buscamos superar las expectativas de cada cliente en cada proyecto que realizamos.</p>
+      </div>
+      <div class="mvv-card reveal">
+        <div class="mvv-icon"><i class="fas fa-eye"></i></div>
+        <h3 data-es="Nuestra Visión" data-ht="Vizyon nou">Nuestra Visión</h3>
+        <p data-es="Ser la empresa líder en instalación de cerámica y Sheetrock en la República Dominicana, reconocida por la excelencia en cada trabajo, la innovación en técnicas de instalación y la confianza que generamos en cada cliente y comunidad." data-ht="Vin antrepriz lidè nan enstale seramik ak Sheetrock nan Repiblik Dominikèn, rekonèt pou ekselans nan chak travay, inovasyon nan teknik enstale ak konfyans nou kreye nan chak kliyan ak kominote.">Ser la empresa líder en instalación de cerámica y Sheetrock en la República Dominicana, reconocida por la excelencia en cada trabajo, la innovación en técnicas de instalación y la confianza que generamos en cada cliente y comunidad.</p>
+      </div>
+      <div class="mvv-card reveal">
+        <div class="mvv-icon"><i class="fas fa-star"></i></div>
+        <h3 data-es="Nuestros Valores" data-ht="Valè nou yo">Nuestros Valores</h3>
+        <p data-es="Integridad en cada trato, excelencia en cada proyecto, respeto hacia el cliente y su espacio, responsabilidad con los compromisos adquiridos, innovación constante en técnicas y materiales, y trabajo en equipo para lograr los mejores resultados." data-ht="Entegrite nan chak relasyon, ekselans nan chak pwojè, respè pou kliyan ak espas li, responsabilite ak angajman yo, inovasyon konstan nan teknik ak materyèl, ak travay ekip pou atenn pi bon rezilta yo.">Integridad en cada trato, excelencia en cada proyecto, respeto hacia el cliente y su espacio, responsabilidad con los compromisos adquiridos, innovación constante en técnicas y materiales, y trabajo en equipo para lograr los mejores resultados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-img-wrap reveal-l">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Jonathan Louis - Fundador JLTiling" class="founder-img" loading="lazy">
+        <div class="founder-tag"><i class="fas fa-award"></i> <span data-es="Fundador &amp; Director" data-ht="Fondatè &amp; Direktè">Fundador &amp; Director</span></div>
+      </div>
+      <div class="founder-text reveal-r">
+        <span class="section-tag" data-es="El equipo" data-ht="Ekip la">El equipo</span>
+        <h2 class="section-title"><em>Jonathan</em> Louis</h2>
+        <span class="founder-role" data-es="Fundador &amp; Director de JLTiling" data-ht="Fondatè &amp; Direktè JLTiling">Fundador &amp; Director de JLTiling</span>
+        <p data-es="Con más de 8 años de experiencia en el sector de la construcción, Jonathan Louis fundó JLTiling con la visión de ofrecer servicios de instalación de cerámica y Sheetrock de la más alta calidad en la República Dominicana." data-ht="Ak plis pase 8 ane eksperyans nan sektè konstriksyon an, Jonathan Louis fonde JLTiling ak vizyon pou ofri sèvis enstale seramik ak Sheetrock ki pi wo kalite a nan Repiblik Dominikèn.">Con más de 8 años de experiencia en el sector de la construcción, Jonathan Louis fundó JLTiling con la visión de ofrecer servicios de instalación de cerámica y Sheetrock de la más alta calidad en la República Dominicana.</p>
+        <p data-es="Su formación técnica y su pasión por los acabados perfectos lo han convertido en un profesional de referencia. Jonathan supervisa personalmente cada proyecto, asegurando que los estándares de calidad se cumplan en cada etapa del trabajo." data-ht="Fòmasyon teknik li ak pasyon li pou finisman pafè yo te fè l yon pwofesyonèl referans. Jonathan sipèvize pèsonèlman chak pwojè, asire estanda kalite yo respekte nan chak etap travay la.">Su formación técnica y su pasión por los acabados perfectos lo han convertido en un profesional de referencia. Jonathan supervisa personalmente cada proyecto, asegurando que los estándares de calidad se cumplan en cada etapa del trabajo.</p>
+        <p data-es="&quot;Mi compromiso es simple: cada trabajo que entrego debe ser exactamente lo que el cliente imaginó, o mejor. La calidad no es negociable.&quot; — Jonathan Louis" data-ht="&quot;Angajman mwen senp: chak travay mwen livye dwe egzakteman sa kliyan an imajine, oswa pi bon. Kalite pa negosyab.&quot; — Jonathan Louis"><em style="color:var(--orange);font-style:italic">"Mi compromiso es simple: cada trabajo que entrego debe ser exactamente lo que el cliente imaginó, o mejor. La calidad no es negociable."</em> — Jonathan Louis</p>
+        <div class="founder-skills">
+          <span class="skill-tag" data-es="Instalación Cerámica" data-ht="Enstale Seramik">Instalación Cerámica</span>
+          <span class="skill-tag" data-es="Sheetrock / Placo" data-ht="Sheetrock / Plako">Sheetrock / Placo</span>
+          <span class="skill-tag" data-es="Remodelación" data-ht="Renovasyon">Remodelación</span>
+          <span class="skill-tag" data-es="Diseño de interiores" data-ht="Dizayn enteryè">Diseño de interiores</span>
+          <span class="skill-tag" data-es="Acabados premium" data-ht="Finisman premium">Acabados premium</span>
+          <span class="skill-tag" data-es="Gestión de proyectos" data-ht="Jestyon pwojè">Gestión de proyectos</span>
+        </div>
+        <div class="founder-contacts">
+          <a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="contact-btn wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+50940894038" class="contact-btn tel"><i class="fas fa-phone"></i> +509 4089 4038</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag reveal" data-es="Lo que nos define" data-ht="Sa ki defini nou">Lo que nos define</span>
+      <h2 class="section-title reveal" data-es="Principios que <span>guían</span> nuestro trabajo" data-ht="Prensip ki <span>gide</span> travay nou">Principios que <span>guían</span> nuestro trabajo</h2>
+      <div class="divider center reveal"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-item reveal"><div class="value-num">01</div><div class="value-content"><h4 data-es="Calidad sin compromisos" data-ht="Kalite san konpromi">Calidad sin compromisos</h4><p data-es="Utilizamos únicamente materiales certificados de primera línea. Cada instalación sigue estándares técnicos rigurosos para garantizar durabilidad y perfección estética." data-ht="Nou itilize sèlman materyèl sètifye premye liy. Chak enstalasyon swiv estanda teknik rigorè pou garanti dirab ak pèfeksyon estetik.">Utilizamos únicamente materiales certificados de primera línea. Cada instalación sigue estándares técnicos rigurosos para garantizar durabilidad y perfección estética.</p></div></div>
+      <div class="value-item reveal"><div class="value-num">02</div><div class="value-content"><h4 data-es="Transparencia total" data-ht="Transparan total">Transparencia total</h4><p data-es="Nuestros presupuestos son detallados, claros y sin costos ocultos. Sabemos que la confianza se construye con honestidad desde el primer contacto hasta la entrega final." data-ht="Devis nou yo detaye, klè ak san kout kache. Nou konnen konfyans bati ak onèstete depi premye kontak rive livrezon final.">Nuestros presupuestos son detallados, claros y sin costos ocultos. Sabemos que la confianza se construye con honestidad desde el primer contacto hasta la entrega final.</p></div></div>
+      <div class="value-item reveal"><div class="value-num">03</div><div class="value-content"><h4 data-es="Puntualidad y cumplimiento" data-ht="Ponktiyalite ak respè angajman">Puntualidad y cumplimiento</h4><p data-es="Respetamos los plazos acordados en cada proyecto. Tu tiempo es valioso, y cumplir con los compromisos es parte fundamental de nuestro servicio profesional." data-ht="Nou respekte delè konvni nan chak pwojè. Tan ou gen valè, ak respekte angajman yo se pati fondamantal sèvis pwofesyonèl nou an.">Respetamos los plazos acordados en cada proyecto. Tu tiempo es valioso, y cumplir con los compromisos es parte fundamental de nuestro servicio profesional.</p></div></div>
+      <div class="value-item reveal"><div class="value-num">04</div><div class="value-content"><h4 data-es="Respeto al cliente" data-ht="Respè pou kliyan">Respeto al cliente</h4><p data-es="Tratamos cada hogar y negocio con el máximo cuidado y respeto. Mantenemos el área de trabajo limpia y organizada durante todo el proceso de instalación." data-ht="Nou trete chak kay ak biznis ak maksimòm swen ak respè. Nou kenbe zòn travay a pwòp ak òganize pandan tout pwosesis enstalasyon an.">Tratamos cada hogar y negocio con el máximo cuidado y respeto. Mantenemos el área de trabajo limpia y organizada durante todo el proceso de instalación.</p></div></div>
+      <div class="value-item reveal"><div class="value-num">05</div><div class="value-content"><h4 data-es="Innovación continua" data-ht="Inovasyon kontinyèl">Innovación continua</h4><p data-es="Nos mantenemos actualizados con las últimas técnicas, materiales y tendencias del mercado para ofrecer siempre las mejores soluciones a nuestros clientes." data-ht="Nou rete ajou ak dènye teknik, materyèl ak tandans mache a pou toujou ofri pi bon solisyon pou kliyan nou yo.">Nos mantenemos actualizados con las últimas técnicas, materiales y tendencias del mercado para ofrecer siempre las mejores soluciones a nuestros clientes.</p></div></div>
+      <div class="value-item reveal"><div class="value-num">06</div><div class="value-content"><h4 data-es="Garantía post-trabajo" data-ht="Garanti apre travay">Garantía post-trabajo</h4><p data-es="Respaldamos cada proyecto realizado con garantía de mano de obra. Si algo no cumple con los estándares acordados, regresamos y lo corregimos sin costo adicional." data-ht="Nou sipòte chak pwojè fini ak garanti men-d-oeuvre. Si yon bagay pa respekte estanda yo konvni, nou retounen kòrije l san kout siplemantè.">Respaldamos cada proyecto realizado con garantía de mano de obra. Si algo no cumple con los estándares acordados, regresamos y lo corregimos sin costo adicional.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag reveal" style="color:var(--orange)" data-es="Cómo trabajamos" data-ht="Kijan nou travay">Cómo trabajamos</span>
+      <h2 class="section-title reveal" style="color:#fff" data-es="Nuestro <span>Proceso</span>" data-ht="Pwosesis <span>nou an</span>">Nuestro <span>Proceso</span></h2>
+      <div class="divider center reveal"></div>
+      <p class="section-sub reveal" style="color:rgba(255,255,255,0.5);margin:0 auto" data-es="Un proceso claro y transparente para garantizar los mejores resultados." data-ht="Yon pwosesis klè ak transparan pou garanti pi bon rezilta yo.">Un proceso claro y transparente para garantizar los mejores resultados.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal"><div class="step-num">1</div><h4 data-es="Contacto inicial" data-ht="Kontakte inisyal">Contacto inicial</h4><p data-es="Nos llamas o escribes. Respondemos en menos de 24h." data-ht="Rele nou oswa ekri nou. Nou reponn nan 24h.">Nos llamas o escribes. Respondemos en menos de 24h.</p></div>
+      <div class="step reveal"><div class="step-num">2</div><h4 data-es="Visita y evaluación" data-ht="Vizit ak evalyasyon">Visita y evaluación</h4><p data-es="Visitamos el lugar para medir y evaluar el proyecto." data-ht="Nou vizite plas la pou mezire ak evalye pwojè a.">Visitamos el lugar para medir y evaluar el proyecto.</p></div>
+      <div class="step reveal"><div class="step-num">3</div><h4 data-es="Cotización gratis" data-ht="Devis gratis">Cotización gratis</h4><p data-es="Presentamos presupuesto detallado sin costo ni compromiso." data-ht="Nou prezante bidjè detaye san kout ni angajman.">Presentamos presupuesto detallado sin costo ni compromiso.</p></div>
+      <div class="step reveal"><div class="step-num">4</div><h4 data-es="Ejecución del proyecto" data-ht="Ekzekisyon pwojè">Ejecución del proyecto</h4><p data-es="Comenzamos el trabajo con materiales de primera calidad." data-ht="Nou kòmanse travay la ak materyèl premye kalite.">Comenzamos el trabajo con materiales de primera calidad.</p></div>
+      <div class="step reveal"><div class="step-num">5</div><h4 data-es="Entrega y garantía" data-ht="Livrezon ak garanti">Entrega y garantía</h4><p data-es="Entregamos el proyecto terminado con garantía incluida." data-ht="Nou livye pwojè a fini ak garanti enkli.">Entregamos el proyecto terminado con garantía incluida.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-ap">
+  <div class="container">
+    <div class="cta-ap-inner reveal">
+      <h2 data-es="¿Listo para empezar tu <em>proyecto</em>?" data-ht="Pare pou kòmanse <em>pwojè</em> ou?">¿Listo para empezar tu <em>proyecto</em>?</h2>
+      <p data-es="Contáctanos hoy y recibe tu cotización completamente gratuita. Sin compromiso, sin letra pequeña." data-ht="Kontakte nou jodi a ak resevwa devis ou nèt gratis. San angajman, san ti lèt.">Contáctanos hoy y recibe tu cotización completamente gratuita. Sin compromiso, sin letra pequeña.</p>
+      <div class="cta-ap-btns">
+        <a href="contact.html" class="btn-primary"><i class="fas fa-paper-plane"></i> <span data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</span></a>
+        <a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="btn-ghost" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="footer-logo">JL<em>Tiling</em></a><p class="footer-desc" data-es="Jonathan Louis — Servicios profesionales de Cerámica y Sheetrock en República Dominicana." data-ht="Jonathan Louis — Sèvis pwofesyonèl Seramik ak Sheetrock nan Repiblik Dominikèn.">Jonathan Louis — Servicios profesionales de Cerámica y Sheetrock en República Dominicana.</p><div class="footer-social"><a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-btn"><i class="fab fa-instagram"></i></a><a href="https://wa.me/50940894038" class="social-btn" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div>
+      <div class="footer-col"><h4 data-es="Páginas" data-ht="Paj yo">Páginas</h4><ul class="footer-links"><li><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a></li><li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm">Nosotros</a></li><li><a href="services.html" data-es="Servicios" data-ht="Sèvis">Servicios</a></li><li><a href="galerie.html" data-es="Galería" data-ht="Galri">Galería</a></li><li><a href="contact.html" data-es="Contacto" data-ht="Kontakte">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4 data-es="Servicios" data-ht="Sèvis">Servicios</h4><ul class="footer-links"><li><a href="services.html">Cerámica</a></li><li><a href="services.html">Sheetrock</a></li><li><a href="services.html" data-es="Remodelación" data-ht="Renovasyon">Remodelación</a></li><li><a href="services.html" data-es="Reparaciones" data-ht="Reparasyon">Reparaciones</a></li></ul></div>
+      <div class="footer-col"><h4 data-es="Contacto" data-ht="Kontakte">Contacto</h4><ul class="footer-links"><li><a href="tel:+50940894038"><i class="fas fa-phone"></i> +509 4089 4038</a></li><li><a href="mailto:juntanluyis@gmail.com"><i class="fas fa-envelope"></i> juntanluyis@gmail.com</a></li><li><a href="#"><i class="fas fa-map-marker-alt"></i> <span data-es="República Dominicana" data-ht="Repiblik Dominikèn">República Dominicana</span></a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 <a href="index.html">JLtiling</a> — <span data-es="Todos los derechos reservados." data-ht="Tout dwa rezève.">Todos los derechos reservados.</span></p><p><a href="https://jltiling.work">jltiling.work</a></p></div>
+  </div>
+</footer>
+<a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
+<script>
+let lang=localStorage.getItem('jl_lang')||'es';
+function applyLang(l){lang=l;localStorage.setItem('jl_lang',l);document.querySelectorAll('[data-es]').forEach(el=>{const v=el.getAttribute('data-'+l);if(!v)return;if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=v;return;}if(el.tagName==='OPTION'){el.textContent=v;return;}el.innerHTML=v;});['langToggle','langToggleMobile'].forEach(id=>{const b=document.getElementById(id);if(b)b.textContent=l==='es'?'🇭🇹 Kreyòl':'🇩🇴 Español';});}
+['langToggle','langToggleMobile'].forEach(id=>{const b=document.getElementById(id);if(b)b.addEventListener('click',()=>applyLang(lang==='es'?'ht':'es'));});
+applyLang(lang);
+const dt=document.getElementById('darkToggle');const st=localStorage.getItem('jl_theme')||'light';document.documentElement.setAttribute('data-theme',st);if(dt){dt.innerHTML=st==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';dt.addEventListener('click',()=>{const d=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',d?'light':'dark');localStorage.setItem('jl_theme',d?'light':'dark');dt.innerHTML=d?'<i class="fas fa-moon"></i>':'<i class="fas fa-sun"></i>';});}
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);const bt=document.getElementById('backTop');if(bt)bt.classList.toggle('visible',window.scrollY>400);});
+document.getElementById('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click',()=>closeMobile());
+function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
+const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');obs.unobserve(en.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach((el,i)=>{el.style.transitionDelay=Math.min(i%6*0.1,0.5)+'s';obs.observe(el);});
+</script>
+</body></html>

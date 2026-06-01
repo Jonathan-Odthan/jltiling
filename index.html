@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JLTiling — Expertos en Cerámica y Sheetrock | jltiling.work</title>
+<meta name="description" content="JLTiling ofrece instalación profesional de cerámica, Sheetrock y remodelación interior en República Dominicana. Calidad, precisión y confianza garantizadas.">
+<meta name="keywords" content="cerámica,sheetrock,instalación,remodelación,pisos,República Dominicana,JLTiling">
+<meta property="og:title" content="JLTiling — Expertos en Cerámica y Sheetrock">
+<meta property="og:description" content="Trabajo profesional, acabado de calidad y servicio confiable.">
+<meta property="og:url" content="https://jltiling.work">
+<link rel="canonical" href="https://jltiling.work">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ========== SHARED BASE ========== */
+:root{--navy:#0a1628;--navy-mid:#0f2040;--navy-light:#1a3260;--orange:#f97316;--orange-light:#fb923c;--orange-glow:rgba(249,115,22,0.15);--white:#ffffff;--text:#1e293b;--text-light:#64748b;--card-bg:#ffffff;--section-bg:#f8fafc;--border:#e2e8f0;--shadow:0 4px 24px rgba(10,22,40,0.10);--shadow-lg:0 16px 56px rgba(10,22,40,0.16);--radius:16px;--tr:0.35s cubic-bezier(0.4,0,0.2,1)}
+[data-theme="dark"]{--card-bg:#0f2040;--section-bg:#0a1628;--text:#e2e8f0;--text-light:#94a3b8;--border:#1a3260;--white:#080e1c;--shadow:0 4px 24px rgba(0,0,0,0.5);--shadow-lg:0 16px 56px rgba(0,0,0,0.6)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;transition:background var(--tr),color var(--tr)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--section-bg)}::-webkit-scrollbar-thumb{background:var(--orange);border-radius:3px}
+h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:700;line-height:1.15}
+h1{font-size:clamp(2.4rem,5.5vw,4rem)}h2{font-size:clamp(1.8rem,3.5vw,2.7rem)}h3{font-size:clamp(1rem,2vw,1.25rem)}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+/* NAVBAR */
+#navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:all 0.4s;padding:1.1rem 0;background:transparent}
+#navbar.scrolled{background:rgba(8,14,28,0.97);backdrop-filter:blur(14px);padding:0.65rem 0;box-shadow:0 2px 30px rgba(0,0,0,0.35)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.65rem;color:#fff;letter-spacing:-0.5px}.logo em{color:var(--orange);font-style:normal}
+.nav-links{display:flex;gap:0.2rem;list-style:none;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.8);padding:0.45rem 0.9rem;border-radius:8px;font-size:0.9rem;font-weight:500;transition:all 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,0.08)}.nav-links a.active{color:var(--orange)}
+.nav-actions{display:flex;align-items:center;gap:0.6rem;flex-shrink:0}
+.btn-lang{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);color:#fff;padding:0.38rem 0.9rem;border-radius:50px;cursor:pointer;font-size:0.82rem;font-weight:600;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.btn-lang:hover{background:var(--orange);border-color:var(--orange)}
+.btn-dark{background:none;border:none;color:rgba(255,255,255,0.75);cursor:pointer;font-size:1rem;transition:color 0.2s;padding:0.4rem}.btn-dark:hover{color:var(--orange)}
+.btn-cta-nav{background:var(--orange);color:#fff;padding:0.5rem 1.2rem;border-radius:50px;font-size:0.87rem;font-weight:600;transition:all 0.2s}
+.btn-cta-nav:hover{background:var(--orange-light);transform:translateY(-1px);box-shadow:0 4px 16px rgba(249,115,22,0.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s}
+/* MOBILE */
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(8,14,28,0.99);z-index:1100;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
+.mobile-menu.open{display:flex}.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem;text-align:center}
+.mobile-menu ul a{color:rgba(255,255,255,0.85);font-size:1.25rem;font-family:'Syne',sans-serif;font-weight:700;padding:0.5rem 2rem;border-radius:10px;transition:all 0.2s;display:block}
+.mobile-menu ul a:hover,.mobile-menu ul a.active{color:var(--orange)}
+.mobile-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.mobile-actions{display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center}
+/* UTILS */
+section{padding:5.5rem 0}.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section-tag{display:inline-block;color:var(--orange);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.7rem}
+.section-title{color:var(--text);margin-bottom:0.8rem}.section-title span{color:var(--orange)}
+.section-sub{color:var(--text-light);font-size:1rem;line-height:1.75;max-width:620px}
+.section-header{margin-bottom:3.5rem}.section-header.center{text-align:center}.section-header.center .section-sub{margin:0 auto}
+.divider{width:48px;height:3px;background:var(--orange);border-radius:2px;margin:0.9rem 0}.divider.center{margin:0.9rem auto}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:#fff;padding:0.85rem 1.9rem;border-radius:50px;font-weight:600;font-size:0.93rem;transition:all 0.25s;box-shadow:0 4px 18px rgba(249,115,22,0.35);border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
+.btn-primary:hover{background:var(--orange-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,0.45)}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;border:2px solid rgba(255,255,255,0.28);color:#fff;padding:0.85rem 1.9rem;border-radius:50px;font-weight:600;font-size:0.93rem;transition:all 0.25s}
+.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal-l.visible{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal-r.visible{opacity:1;transform:translateX(0)}
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:4.5rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;display:inline-block;margin-bottom:1rem}.footer-logo em{color:var(--orange);font-style:normal}
+.footer-desc{font-size:0.87rem;line-height:1.75;color:rgba(255,255,255,0.45);max-width:290px;margin-bottom:1.5rem}
+.footer-social{display:flex;gap:0.65rem}
+.social-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;font-size:0.85rem;transition:all 0.2s}
+.social-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateY(-2px)}
+.footer-col h4{font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:0.88rem;margin-bottom:1.1rem;text-transform:uppercase;letter-spacing:0.8px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.55rem}
+.footer-links a{color:rgba(255,255,255,0.45);font-size:0.86rem;transition:color 0.2s;display:flex;align-items:center;gap:0.5rem}
+.footer-links a:hover{color:var(--orange)}.footer-links a i{width:14px;font-size:0.78rem;color:var(--orange);opacity:0.6}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.footer-bottom p{font-size:0.81rem;color:rgba(255,255,255,0.3)}.footer-bottom a{color:var(--orange)}
+/* FLOATING */
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,0.5);animation:waBounce 2.5s infinite;transition:transform 0.2s}
+.whatsapp-float:hover{transform:scale(1.12)!important;animation:none}
+.back-top{position:fixed;bottom:2rem;left:2rem;z-index:500;width:42px;height:42px;background:var(--navy-mid);border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;cursor:pointer;opacity:0;pointer-events:none;transition:all 0.3s}
+.back-top.visible{opacity:1;pointer-events:auto}.back-top:hover{background:var(--orange);border-color:var(--orange)}
+@keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+/* ========== HOME SPECIFIC ========== */
+/* HERO */
+#hero{min-height:100vh;background:linear-gradient(135deg,#060e1c 0%,#0a1628 40%,#0f2040 100%);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-photo{position:absolute;right:0;top:0;width:58%;height:100%;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80') center/cover no-repeat;mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,0.7) 30%,rgba(0,0,0,0.9) 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,0.7) 30%,rgba(0,0,0,0.9) 100%)}
+.hero-photo::after{content:'';position:absolute;inset:0;background:rgba(8,14,28,0.55)}
+.hero-pattern{position:absolute;inset:0;background-image:radial-gradient(circle at 15% 85%,rgba(249,115,22,0.09) 0%,transparent 50%),radial-gradient(circle at 85% 15%,rgba(249,115,22,0.05) 0%,transparent 50%);pointer-events:none}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);background-size:70px 70px;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;padding:0 2rem;position:relative;z-index:2;padding-top:7rem;padding-bottom:5rem}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.28);color:var(--orange);padding:0.45rem 1.1rem;border-radius:50px;font-size:0.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp 0.8s ease both}
+.hero-badge span{width:6px;height:6px;background:var(--orange);border-radius:50%;display:inline-block}
+.hero-title{color:#fff;max-width:680px;margin-bottom:1.2rem;animation:fadeUp 0.9s 0.15s ease both}
+.hero-title em{color:var(--orange);font-style:normal}
+.hero-sub{color:rgba(255,255,255,0.65);font-size:clamp(1rem,1.8vw,1.18rem);max-width:520px;line-height:1.75;margin-bottom:2.5rem;animation:fadeUp 0.9s 0.3s ease both}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.9s 0.45s ease both;margin-bottom:4rem}
+.hero-stats{display:flex;gap:3rem;flex-wrap:wrap;animation:fadeUp 0.9s 0.6s ease both;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.08)}
+.stat-item{display:flex;flex-direction:column}
+.stat-num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:#fff;line-height:1}
+.stat-num em{color:var(--orange);font-style:normal}
+.stat-label{font-size:0.78rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.8px;margin-top:0.3rem}
+.hero-scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.3);font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;animation:float 2s ease-in-out infinite}
+.scroll-bar{width:1px;height:44px;background:linear-gradient(to bottom,rgba(249,115,22,0.6),transparent)}
+@keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+/* SERVICES PREVIEW */
+#services-preview{background:var(--section-bg)}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.srv-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.8rem 1.5rem;transition:all var(--tr);position:relative;overflow:hidden;cursor:default}
+.srv-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--orange);transform:scaleX(0);transition:transform 0.3s;transform-origin:left}
+.srv-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}.srv-card:hover::after{transform:scaleX(1)}
+.srv-icon{width:52px;height:52px;background:var(--orange-glow);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--orange);margin-bottom:1.2rem;transition:all var(--tr)}
+.srv-card:hover .srv-icon{background:var(--orange);color:#fff}
+.srv-card h3{font-size:0.97rem;margin-bottom:0.5rem;color:var(--text)}
+.srv-card p{font-size:0.84rem;color:var(--text-light);line-height:1.6}
+/* WHY STRIP */
+#why-strip{background:var(--navy);position:relative;overflow:hidden}
+#why-strip::before{content:'';position:absolute;top:-60%;right:-5%;width:700px;height:700px;background:radial-gradient(circle,rgba(249,115,22,0.06),transparent 60%);pointer-events:none}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.why-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius);padding:2rem;transition:all var(--tr)}
+.why-card:hover{background:rgba(249,115,22,0.08);border-color:rgba(249,115,22,0.25);transform:translateY(-4px)}
+.why-icon{font-size:1.8rem;color:var(--orange);margin-bottom:1rem}
+.why-card h3{color:#fff;font-size:1rem;margin-bottom:0.5rem}
+.why-card p{color:rgba(255,255,255,0.5);font-size:0.86rem;line-height:1.65}
+/* TESTIMONIALS */
+#testi{background:var(--white)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testi-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;position:relative;transition:all var(--tr)}
+.testi-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:rgba(249,115,22,0.3)}
+.quote{position:absolute;top:1.5rem;right:1.5rem;font-size:2rem;color:var(--orange);opacity:0.1}
+.stars{color:var(--orange);font-size:0.85rem;letter-spacing:2px;margin-bottom:1rem}
+.testi-text{color:var(--text-light);font-size:0.93rem;line-height:1.75;margin-bottom:1.5rem;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:0.75rem}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--orange),#b45309);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Syne',sans-serif;font-size:1rem;flex-shrink:0}
+.testi-name{font-weight:600;font-size:0.9rem;color:var(--text)}
+.testi-loc{font-size:0.78rem;color:var(--text-light)}
+/* CTA BAND */
+#cta-band{background:linear-gradient(135deg,#0f2040,#1a3260);padding:5rem 0;position:relative;overflow:hidden}
+#cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(249,115,22,0.1),transparent 60%)}
+.cta-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-inner h2{color:#fff;max-width:560px}.cta-inner p{color:rgba(255,255,255,0.55);margin-top:0.5rem;font-size:1rem}
+.cta-btns{display:flex;gap:1rem;flex-wrap:wrap;flex-shrink:0}
+/* RESPONSIVE */
+@media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:768px){
+  .nav-links,.nav-actions .btn-cta-nav,.nav-actions .btn-dark{display:none}.hamburger{display:flex}
+  section{padding:4rem 0}.hero-photo{width:100%;opacity:0.15}
+  .why-grid,.testi-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}
+  .hero-stats{gap:1.5rem}.cta-inner{flex-direction:column;text-align:center}
+}
+@media(max-width:480px){.services-grid{grid-template-columns:1fr}.hero-btns{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">JL<em>Tiling</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active" data-es="Inicio" data-ht="Akèy">Inicio</a></li>
+      <li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm">Nosotros</a></li>
+      <li><a href="services.html" data-es="Servicios" data-ht="Sèvis">Servicios</a></li>
+      <li><a href="galerie.html" data-es="Galería" data-ht="Galri">Galería</a></li>
+      <li><a href="contact.html" data-es="Contacto" data-ht="Kontakte">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-dark" id="darkToggle"><i class="fas fa-moon"></i></button>
+      <button class="btn-lang" id="langToggle">🇭🇹 Kreyòl</button>
+      <a href="contact.html" class="btn-cta-nav" data-es="Cotización gratis" data-ht="Devis gratis">Cotización gratis</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+  <ul>
+    <li><a href="index.html" class="active" data-es="Inicio" data-ht="Akèy" onclick="closeMobile()">Inicio</a></li>
+    <li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm" onclick="closeMobile()">Nosotros</a></li>
+    <li><a href="services.html" data-es="Servicios" data-ht="Sèvis" onclick="closeMobile()">Servicios</a></li>
+    <li><a href="galerie.html" data-es="Galería" data-ht="Galri" onclick="closeMobile()">Galería</a></li>
+    <li><a href="contact.html" data-es="Contacto" data-ht="Kontakte" onclick="closeMobile()">Contacto</a></li>
+  </ul>
+  <div class="mobile-actions">
+    <button class="btn-lang" id="langToggleMobile">🇭🇹 Kreyòl</button>
+    <a href="contact.html" class="btn-primary" onclick="closeMobile()" data-es="Cotización gratis" data-ht="Devis gratis">Cotización gratis</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-photo"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span></span> <span data-es="Servicio Premium · República Dominicana" data-ht="Sèvis Premium · Repiblik Dominikèn">Servicio Premium · República Dominicana</span></div>
+    <h1 class="hero-title" data-es="Expertos en Instalación de <em>Cerámica</em> y <em>Sheetrock</em>" data-ht="Espesyalis nan Enstale <em>Seramik</em> ak <em>Sheetrock</em>">Expertos en Instalación de <em>Cerámica</em> y <em>Sheetrock</em></h1>
+    <p class="hero-sub" data-es="Trabajo profesional, acabado de calidad y servicio confiable para hogares y negocios en toda la República Dominicana." data-ht="Travay pwofesyonèl, kalite ak sèvis fyab pou kay ak biznis nan tout Repiblik Dominikèn.">Trabajo profesional, acabado de calidad y servicio confiable para hogares y negocios en toda la República Dominicana.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-primary"><i class="fas fa-file-invoice"></i> <span data-es="Solicitar Cotización" data-ht="Mande Devis">Solicitar Cotización</span></a>
+      <a href="tel:+50940894038" class="btn-ghost"><i class="fas fa-phone"></i> <span data-es="Llamar ahora" data-ht="Rele koulye a">Llamar ahora</span></a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num" id="c1">8<em>+</em></div><div class="stat-label" data-es="Años de experiencia" data-ht="Ane eksperyans">Años de experiencia</div></div>
+      <div class="stat-item"><div class="stat-num" id="c2">300<em>+</em></div><div class="stat-label" data-es="Proyectos completados" data-ht="Pwojè fini">Proyectos completados</div></div>
+      <div class="stat-item"><div class="stat-num" id="c3">100<em>%</em></div><div class="stat-label" data-es="Satisfacción garantizada" data-ht="Satisfaksyon garanti">Satisfacción garantizada</div></div>
+      <div class="stat-item"><div class="stat-num">24<em>h</em></div><div class="stat-label" data-es="Respuesta garantizada" data-ht="Repons garanti">Respuesta garantizada</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint"><div class="scroll-bar"></div><span>Scroll</span></div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section id="services-preview">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag reveal" data-es="Lo que hacemos" data-ht="Sa nou fè">Lo que hacemos</span>
+      <h2 class="section-title reveal" data-es="Nuestros <span>Servicios</span>" data-ht="Sèvis <span>nou yo</span>">Nuestros <span>Servicios</span></h2>
+      <div class="divider center reveal"></div>
+      <p class="section-sub reveal" data-es="Soluciones completas para construcción y remodelación con los más altos estándares de calidad." data-ht="Solisyon konplè pou konstriksyon ak renovasyon ak pi wo estanda kalite.">Soluciones completas para construcción y remodelación con los más altos estándares de calidad.</p>
+    </div>
+    <div class="services-grid">
+      <div class="srv-card reveal"><div class="srv-icon"><i class="fas fa-th-large"></i></div><h3 data-es="Instalación de Cerámica" data-ht="Enstale Seramik">Instalación de Cerámica</h3><p data-es="Cerámica, porcelanato y mosaicos instalados con precisión perfecta." data-ht="Seramik, pòselàn ak mozayik enstale ak presiziyon pafè.">Cerámica, porcelanato y mosaicos instalados con precisión perfecta.</p></div>
+      <div class="srv-card reveal"><div class="srv-icon"><i class="fas fa-layer-group"></i></div><h3 data-es="Instalación Sheetrock" data-ht="Enstale Sheetrock">Instalación Sheetrock</h3><p data-es="Paneles de yeso para paredes y cielos rasos con acabados lisos." data-ht="Panno jips pou mi ak plafon ak finisman lis.">Paneles de yeso para paredes y cielos rasos con acabados lisos.</p></div>
+      <div class="srv-card reveal"><div class="srv-icon"><i class="fas fa-home"></i></div><h3 data-es="Remodelación Interior" data-ht="Renovasyon Enteryè">Remodelación Interior</h3><p data-es="Transformamos espacios completos según tu estilo y presupuesto." data-ht="Nou transfòme espas yo daprè gou ou ak bidjè ou.">Transformamos espacios completos según tu estilo y presupuesto.</p></div>
+      <div class="srv-card reveal"><div class="srv-icon"><i class="fas fa-tools"></i></div><h3 data-es="Reparación y Mantenimiento" data-ht="Reparasyon ak Antretyen">Reparación y Mantenimiento</h3><p data-es="Reparamos pisos, paredes y acabados con rapidez y garantía." data-ht="Nou repare atè, mi ak finisman rapid ak garanti.">Reparamos pisos, paredes y acabados con rapidez y garantía.</p></div>
+      <div class="srv-card reveal"><div class="srv-icon"><i class="fas fa-paint-brush"></i></div><h3 data-es="Diseño y Acabados" data-ht="Dizayn ak Finisman">Diseño y Acabados</h3><p data-es="Asesoramiento en diseño y aplicación de acabados de alta calidad." data-ht="Konsèy nan dizayn ak aplikasyon finisman kalite.">Asesoramiento en diseño y aplicación de acabados de alta calidad.</p></div>
+      <div class="srv-card reveal"><div class="srv-icon"><i class="fas fa-building"></i></div><h3 data-es="Trabajo Residencial" data-ht="Travay Rezidansyèl">Trabajo Residencial</h3><p data-es="Casas y apartamentos atendidos con máximo cuidado y detalle." data-ht="Kay ak appatman trete ak maksimòm swen ak detay.">Casas y apartamentos atendidos con máximo cuidado y detalle.</p></div>
+      <div class="srv-card reveal"><div class="srv-icon"><i class="fas fa-city"></i></div><h3 data-es="Trabajo Comercial" data-ht="Travay Komèsyal">Trabajo Comercial</h3><p data-es="Oficinas y locales comerciales ejecutados con eficiencia." data-ht="Biwo ak lokal komèsyal egzekite ak efikasite.">Oficinas y locales comerciales ejecutados con eficiencia.</p></div>
+      <div class="srv-card reveal"><div class="srv-icon"><i class="fas fa-ruler-combined"></i></div><h3 data-es="Reparación de Pisos" data-ht="Reparasyon Atè">Reparación de Pisos</h3><p data-es="Restauración de pisos dañados, grietas e irregularidades." data-ht="Restòrasyon atè ki domaje, fant ak iregilarite.">Restauración de pisos dañados, grietas e irregularidades.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:3rem" class="reveal">
+      <a href="services.html" class="btn-primary"><i class="fas fa-arrow-right"></i> <span data-es="Ver todos los servicios" data-ht="Wè tout sèvis yo">Ver todos los servicios</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY STRIP -->
+<section id="why-strip">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag reveal" style="color:var(--orange)" data-es="¿Por qué elegirnos?" data-ht="Poukisa chwazi nou?">¿Por qué elegirnos?</span>
+      <h2 class="section-title reveal" style="color:#fff" data-es="Nuestra <span>Diferencia</span>" data-ht="Diferans <span>nou an</span>">Nuestra <span>Diferencia</span></h2>
+      <div class="divider center reveal"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-hard-hat"></i></div><h3 data-es="Trabajo Profesional" data-ht="Travay Pwofesyonèl">Trabajo Profesional</h3><p data-es="Cada proyecto se ejecuta con los más altos estándares de la industria." data-ht="Chak pwojè egzekite ak pi wo estanda endistrI a.">Cada proyecto se ejecuta con los más altos estándares de la industria.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-gem"></i></div><h3 data-es="Materiales de Calidad" data-ht="Materyèl Kalite">Materiales de Calidad</h3><p data-es="Usamos materiales certificados de primera línea para durabilidad máxima." data-ht="Nou itilize materyèl sètifye premye liy pou dirab maksimòm.">Usamos materiales certificados de primera línea para durabilidad máxima.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-file-invoice-dollar"></i></div><h3 data-es="Presupuesto Gratuito" data-ht="Devis Gratis">Presupuesto Gratuito</h3><p data-es="Cotizaciones sin costo, transparentes y sin ningún compromiso." data-ht="Devis gratis, transparan ak san okenn angajman.">Cotizaciones sin costo, transparentes y sin ningún compromiso.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-bolt"></i></div><h3 data-es="Entrega a Tiempo" data-ht="Livrezon Alè">Entrega a Tiempo</h3><p data-es="Cumplimos plazos acordados sin sacrificar calidad ni acabado." data-ht="Nou respekte delè yo san sakrifye kalite ni finisman.">Cumplimos plazos acordados sin sacrificar calidad ni acabado.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-shield-alt"></i></div><h3 data-es="Garantía de Trabajo" data-ht="Garanti Travay">Garantía de Trabajo</h3><p data-es="Garantizamos cada proyecto realizado. Tu inversión protegida." data-ht="Nou garanti chak pwojè fini. Envestisman ou pwoteje.">Garantizamos cada proyecto realizado. Tu inversión protegida.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-handshake"></i></div><h3 data-es="Atención Personalizada" data-ht="Atansyon Pèsonalize">Atención Personalizada</h3><p data-es="Acompañamos todo el proceso con comunicación directa y clara." data-ht="Nou akonpanye tout pwosesis la ak kominikasyon dirèk ak klè.">Acompañamos todo el proceso con comunicación directa y clara.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testi">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag reveal" data-es="Clientes satisfechos" data-ht="Kliyan satisfè">Clientes satisfechos</span>
+      <h2 class="section-title reveal" data-es="Lo que dicen de <span>nosotros</span>" data-ht="Sa yo di sou <span>nou</span>">Lo que dicen de <span>nosotros</span></h2>
+      <div class="divider center reveal"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="quote"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testi-text" data-es='"Excelente trabajo y terminación impecable. Jonathan y su equipo dejaron mi baño completamente renovado. Muy detallistas y profesionales."' data-ht='"Travay ekselan ak finisman ireprochab. Jonathan ak ekip li a kite saldeben mwen nèf nèt. Trè detayis ak pwofesyonèl."'>"Excelente trabajo y terminación impecable. Jonathan y su equipo dejaron mi baño completamente renovado. Muy detallistas y profesionales."</p>
+        <div class="testi-author"><div class="testi-avatar">M</div><div><div class="testi-name">María González</div><div class="testi-loc">Santo Domingo</div></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="quote"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testi-text" data-es='"Muy responsable y profesional. Cumplió con el tiempo y el precio fue justo. El resultado superó totalmente mis expectativas."' data-ht='"Trè responsab ak pwofesyonèl. Li respekte tan an ak pri a te jis. Rezilta a depase ekspektasyon mwen nèt."'>"Muy responsable y profesional. Cumplió con el tiempo y el precio fue justo. El resultado superó totalmente mis expectativas."</p>
+        <div class="testi-author"><div class="testi-avatar">C</div><div><div class="testi-name">Carlos Martínez</div><div class="testi-loc">Santiago</div></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="quote"><i class="fas fa-quote-right"></i></div>
+        <div class="stars">★★★★★</div>
+        <p class="testi-text" data-es='"Lo recomiendo al 100%. Instaló cerámica y Sheetrock en toda mi casa. Trabajo impecable, limpio y a excelente precio. ¡Gracias!"' data-ht='"Mwen rekòmande l 100%. Li enstale seramik ak Sheetrock nan tout kay mwen. Travay ireprochab, pwòp ak bon pri. Mèsi!"'>"Lo recomiendo al 100%. Instaló cerámica y Sheetrock en toda mi casa. Trabajo impecable, limpio y a excelente precio. ¡Gracias!"</p>
+        <div class="testi-author"><div class="testi-avatar">A</div><div><div class="testi-name">Ana Pérez</div><div class="testi-loc">La Romana</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta-band">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div>
+        <h2 data-es="¿Listo para transformar tu espacio?" data-ht="Pare pou transfòme espas ou?">¿Listo para transformar tu espacio?</h2>
+        <p data-es="Contáctanos hoy y recibe tu cotización gratuita en menos de 24 horas." data-ht="Kontakte nou jodi a ak resevwa devis gratis ou nan mwens pase 24 èdtan.">Contáctanos hoy y recibe tu cotización gratuita en menos de 24 horas.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary"><i class="fas fa-paper-plane"></i> <span data-es="Solicitar cotización" data-ht="Mande devis">Solicitar cotización</span></a>
+        <a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="btn-ghost" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-logo">JL<em>Tiling</em></a>
+        <p class="footer-desc" data-es="Jonathan Louis — Servicios profesionales de Cerámica y Sheetrock en la República Dominicana. Calidad, precisión y compromiso garantizados." data-ht="Jonathan Louis — Sèvis pwofesyonèl Seramik ak Sheetrock nan Repiblik Dominikèn. Kalite, presiziyon ak angajman garanti.">Jonathan Louis — Servicios profesionales de Cerámica y Sheetrock en la República Dominicana. Calidad, precisión y compromiso garantizados.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/50940894038" class="social-btn" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-es="Páginas" data-ht="Paj yo">Páginas</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a></li>
+          <li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm">Nosotros</a></li>
+          <li><a href="services.html" data-es="Servicios" data-ht="Sèvis">Servicios</a></li>
+          <li><a href="galerie.html" data-es="Galería" data-ht="Galri">Galería</a></li>
+          <li><a href="contact.html" data-es="Contacto" data-ht="Kontakte">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-es="Servicios" data-ht="Sèvis">Servicios</h4>
+        <ul class="footer-links">
+          <li><a href="services.html" data-es="Cerámica" data-ht="Seramik">Cerámica</a></li>
+          <li><a href="services.html" data-es="Sheetrock" data-ht="Sheetrock">Sheetrock</a></li>
+          <li><a href="services.html" data-es="Remodelación" data-ht="Renovasyon">Remodelación</a></li>
+          <li><a href="services.html" data-es="Reparaciones" data-ht="Reparasyon">Reparaciones</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-es="Contacto" data-ht="Kontakte">Contacto</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+50940894038"><i class="fas fa-phone"></i> +509 4089 4038</a></li>
+          <li><a href="mailto:juntanluyis@gmail.com"><i class="fas fa-envelope"></i> juntanluyis@gmail.com</a></li>
+          <li><a href="contact.html"><i class="fas fa-map-marker-alt"></i> <span data-es="República Dominicana" data-ht="Repiblik Dominikèn">República Dominicana</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <a href="index.html">JLtiling</a> — <span data-es="Todos los derechos reservados." data-ht="Tout dwa rezève.">Todos los derechos reservados.</span></p>
+      <p><a href="https://jltiling.work" target="_blank">jltiling.work</a></p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+let lang = localStorage.getItem('jl_lang') || 'es';
+function applyLang(l) {
+  lang = l; localStorage.setItem('jl_lang', l);
+  document.querySelectorAll('[data-es]').forEach(el => {
+    const v = el.getAttribute('data-' + l);
+    if (!v) return;
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') { el.placeholder = v; return; }
+    if (el.tagName === 'OPTION') { el.textContent = v; return; }
+    el.innerHTML = v;
+  });
+  ['langToggle','langToggleMobile'].forEach(id => { const b = document.getElementById(id); if (b) b.textContent = l === 'es' ? '🇭🇹 Kreyòl' : '🇩🇴 Español'; });
+}
+['langToggle','langToggleMobile'].forEach(id => { const b = document.getElementById(id); if (b) b.addEventListener('click', () => applyLang(lang === 'es' ? 'ht' : 'es')); });
+applyLang(lang);
+const darkToggle = document.getElementById('darkToggle');
+const savedTheme = localStorage.getItem('jl_theme') || 'light';
+document.documentElement.setAttribute('data-theme', savedTheme);
+if (darkToggle) { darkToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>'; darkToggle.addEventListener('click', () => { const d = document.documentElement.getAttribute('data-theme') === 'dark'; document.documentElement.setAttribute('data-theme', d ? 'light' : 'dark'); localStorage.setItem('jl_theme', d ? 'light' : 'dark'); darkToggle.innerHTML = d ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>'; }); }
+window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); const bt = document.getElementById('backTop'); if (bt) bt.classList.toggle('visible', window.scrollY > 400); });
+document.getElementById('backTop').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click', () => closeMobile());
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} }); }, {threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach((el,i) => { el.style.transitionDelay = Math.min(i%6*0.1,0.5)+'s'; obs.observe(el); });
+</script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — JLTiling | jltiling.work</title>
+<meta name="description" content="Contacta a JLTiling para tu cotización gratuita de cerámica y Sheetrock. WhatsApp, teléfono o formulario en línea. Respuesta en menos de 24 horas.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--navy:#0a1628;--navy-mid:#0f2040;--navy-light:#1a3260;--orange:#f97316;--orange-light:#fb923c;--orange-glow:rgba(249,115,22,0.15);--white:#ffffff;--text:#1e293b;--text-light:#64748b;--card-bg:#ffffff;--section-bg:#f8fafc;--border:#e2e8f0;--shadow:0 4px 24px rgba(10,22,40,0.10);--shadow-lg:0 16px 56px rgba(10,22,40,0.16);--radius:16px;--tr:0.35s cubic-bezier(0.4,0,0.2,1)}
+[data-theme="dark"]{--card-bg:#0f2040;--section-bg:#0a1628;--text:#e2e8f0;--text-light:#94a3b8;--border:#1a3260;--white:#080e1c;--shadow:0 4px 24px rgba(0,0,0,0.5);--shadow-lg:0 16px 56px rgba(0,0,0,0.6)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;transition:background var(--tr),color var(--tr)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--section-bg)}::-webkit-scrollbar-thumb{background:var(--orange);border-radius:3px}
+h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:700;line-height:1.15}h1{font-size:clamp(2.2rem,5vw,3.8rem)}h2{font-size:clamp(1.7rem,3.5vw,2.6rem)}h3{font-size:clamp(1rem,2vw,1.2rem)}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+#navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:all 0.4s;padding:1.1rem 0;background:rgba(8,14,28,0.6);backdrop-filter:blur(8px)}
+#navbar.scrolled{background:rgba(8,14,28,0.97);backdrop-filter:blur(14px);padding:0.65rem 0;box-shadow:0 2px 30px rgba(0,0,0,0.35)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.65rem;color:#fff;letter-spacing:-0.5px}.logo em{color:var(--orange);font-style:normal}
+.nav-links{display:flex;gap:0.2rem;list-style:none;align-items:center}.nav-links a{color:rgba(255,255,255,0.8);padding:0.45rem 0.9rem;border-radius:8px;font-size:0.9rem;font-weight:500;transition:all 0.2s}.nav-links a:hover{color:#fff;background:rgba(255,255,255,0.08)}.nav-links a.active{color:var(--orange)}
+.nav-actions{display:flex;align-items:center;gap:0.6rem;flex-shrink:0}
+.btn-lang{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);color:#fff;padding:0.38rem 0.9rem;border-radius:50px;cursor:pointer;font-size:0.82rem;font-weight:600;transition:all 0.2s;font-family:'DM Sans',sans-serif}.btn-lang:hover{background:var(--orange);border-color:var(--orange)}
+.btn-dark{background:none;border:none;color:rgba(255,255,255,0.75);cursor:pointer;font-size:1rem;transition:color 0.2s;padding:0.4rem}.btn-dark:hover{color:var(--orange)}
+.btn-cta-nav{background:var(--orange);color:#fff;padding:0.5rem 1.2rem;border-radius:50px;font-size:0.87rem;font-weight:600;transition:all 0.2s}.btn-cta-nav:hover{background:var(--orange-light);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(8,14,28,0.99);z-index:1100;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}.mobile-menu.open{display:flex}.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1rem;text-align:center}.mobile-menu ul a{color:rgba(255,255,255,0.85);font-size:1.25rem;font-family:'Syne',sans-serif;font-weight:700;padding:0.5rem 2rem;border-radius:10px;transition:all 0.2s;display:block}.mobile-menu ul a:hover,.mobile-menu ul a.active{color:var(--orange)}
+.mobile-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}.mobile-actions{display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center}
+section{padding:5rem 0}.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section-tag{display:inline-block;color:var(--orange);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.7rem}
+.section-title{color:var(--text);margin-bottom:0.8rem}.section-title span{color:var(--orange)}
+.section-sub{color:var(--text-light);font-size:1rem;line-height:1.75;max-width:640px}
+.section-header{margin-bottom:3rem}.section-header.center{text-align:center}.section-header.center .section-sub{margin:0 auto}
+.divider{width:48px;height:3px;background:var(--orange);border-radius:2px;margin:0.9rem 0}.divider.center{margin:0.9rem auto}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--orange);color:#fff;padding:0.85rem 1.9rem;border-radius:50px;font-weight:600;font-size:0.93rem;transition:all 0.25s;box-shadow:0 4px 18px rgba(249,115,22,0.35);border:none;cursor:pointer;font-family:'DM Sans',sans-serif}.btn-primary:hover{background:var(--orange-light);transform:translateY(-2px)}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal-l.visible{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(36px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal-r.visible{opacity:1;transform:translateX(0)}
+footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:4.5rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;color:#fff;display:inline-block;margin-bottom:1rem}.footer-logo em{color:var(--orange);font-style:normal}
+.footer-desc{font-size:0.87rem;line-height:1.75;color:rgba(255,255,255,0.45);max-width:290px;margin-bottom:1.5rem}
+.footer-social{display:flex;gap:0.65rem}.social-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;font-size:0.85rem;transition:all 0.2s}.social-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateY(-2px)}
+.footer-col h4{font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:0.88rem;margin-bottom:1.1rem;text-transform:uppercase;letter-spacing:0.8px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.55rem}.footer-links a{color:rgba(255,255,255,0.45);font-size:0.86rem;transition:color 0.2s;display:flex;align-items:center;gap:0.5rem}.footer-links a:hover{color:var(--orange)}.footer-links a i{width:14px;font-size:0.78rem;color:var(--orange);opacity:0.6}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.footer-bottom p{font-size:0.81rem;color:rgba(255,255,255,0.3)}.footer-bottom a{color:var(--orange)}
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 4px 20px rgba(37,211,102,0.5);animation:waBounce 2.5s infinite;transition:transform 0.2s}.whatsapp-float:hover{transform:scale(1.12)!important;animation:none}
+.back-top{position:fixed;bottom:2rem;left:2rem;z-index:500;width:42px;height:42px;background:var(--navy-mid);border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;cursor:pointer;opacity:0;pointer-events:none;transition:all 0.3s}.back-top.visible{opacity:1;pointer-events:auto}.back-top:hover{background:var(--orange);border-color:var(--orange)}
+@keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+/* PAGE HERO */
+.page-hero{min-height:46vh;background:linear-gradient(135deg,#060e1c 0%,#0a1628 50%,#0f2040 100%);display:flex;align-items:center;position:relative;overflow:hidden;padding:8rem 2rem 4rem}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(249,115,22,0.08),transparent 60%)}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);background-size:70px 70px}
+.page-hero-content{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;color:rgba(255,255,255,0.4);font-size:0.82rem;margin-bottom:1.2rem}.breadcrumb a{color:rgba(255,255,255,0.4);transition:color 0.2s}.breadcrumb a:hover{color:var(--orange)}.breadcrumb .sep{opacity:0.35}
+.page-hero-content h1{color:#fff;max-width:700px;margin-bottom:0.8rem}.page-hero-content h1 em{color:var(--orange);font-style:normal}
+.page-hero-content p{color:rgba(255,255,255,0.6);font-size:1.05rem;max-width:560px;line-height:1.75}
+/* QUICK CONTACT STRIP */
+#quick-contact{background:var(--orange);padding:2rem 0}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.15)}
+.quick-item{background:var(--orange);padding:1.5rem 2rem;display:flex;align-items:center;gap:1rem;transition:background 0.2s}
+.quick-item:hover{background:var(--orange-light)}
+.quick-item i{font-size:1.5rem;color:#fff;flex-shrink:0}
+.quick-item-text{color:#fff}
+.quick-item-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.8px;opacity:0.75;margin-bottom:0.1rem}
+.quick-item-value{font-weight:700;font-size:0.97rem}
+.quick-item-value a{color:#fff}
+/* MAIN CONTACT */
+#contact-main{background:var(--section-bg)}
+.contact-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start}
+/* INFO SIDE */
+.contact-info-block{display:flex;flex-direction:column;gap:1.2rem}
+.info-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem;display:flex;align-items:flex-start;gap:1rem;transition:all var(--tr)}
+.info-card:hover{border-color:rgba(249,115,22,0.3);box-shadow:var(--shadow);transform:translateX(4px)}
+.info-icon{width:48px;height:48px;background:var(--orange-glow);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:1.2rem;flex-shrink:0;transition:all var(--tr)}
+.info-card:hover .info-icon{background:var(--orange);color:#fff}
+.info-label{font-size:0.74rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-light);margin-bottom:0.2rem;font-weight:600}
+.info-value{font-weight:600;color:var(--text);font-size:0.97rem;line-height:1.4}
+.info-value a{color:inherit;transition:color 0.2s}.info-value a:hover{color:var(--orange)}
+.info-sub{font-size:0.8rem;color:var(--text-light);margin-top:0.15rem}
+.wa-big-btn{display:flex;align-items:center;gap:1rem;background:#25d366;color:#fff;border-radius:var(--radius);padding:1.4rem 1.8rem;margin-top:0.5rem;transition:all 0.2s;box-shadow:0 6px 24px rgba(37,211,102,0.3)}
+.wa-big-btn:hover{background:#1db954;transform:translateY(-3px);box-shadow:0 10px 32px rgba(37,211,102,0.45)}
+.wa-big-btn i{font-size:2rem;flex-shrink:0}
+.wa-big-text{display:flex;flex-direction:column}
+.wa-big-label{font-size:0.75rem;opacity:0.8;text-transform:uppercase;letter-spacing:0.5px}
+.wa-big-value{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem}
+.social-row{display:flex;gap:0.6rem;margin-top:0.5rem}
+.soc-btn{width:44px;height:44px;border-radius:50%;background:var(--card-bg);border:1px solid var(--border);color:var(--text-light);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s}
+.soc-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateY(-2px)}
+/* FORM SIDE */
+.form-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;box-shadow:var(--shadow)}
+.form-card-title{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:0.4rem}
+.form-card-sub{font-size:0.88rem;color:var(--text-light);margin-bottom:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:0.78rem;font-weight:700;color:var(--text-light);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.5px}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:var(--section-bg);border:1.5px solid var(--border);border-radius:10px;padding:0.85rem 1rem;font-size:0.93rem;font-family:'DM Sans',sans-serif;color:var(--text);transition:border-color 0.2s,box-shadow 0.2s;outline:none;appearance:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(249,115,22,0.1)}
+.form-group textarea{min-height:130px;resize:vertical}
+.honeypot{display:none!important}
+.btn-submit{width:100%;background:var(--orange);color:#fff;border:none;padding:1rem;border-radius:50px;font-size:1rem;font-weight:700;font-family:'Syne',sans-serif;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.5rem;letter-spacing:0.3px}
+.btn-submit:hover{background:var(--orange-light);transform:translateY(-2px);box-shadow:0 6px 24px rgba(249,115,22,0.4)}
+.btn-submit:disabled{opacity:0.65;cursor:not-allowed;transform:none}
+.form-success{display:none;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.3);border-radius:12px;padding:1.2rem;text-align:center;color:#16a34a;font-weight:600;margin-top:1rem;font-size:0.95rem}
+.form-success i{font-size:1.3rem;display:block;margin-bottom:0.3rem}
+.form-error{display:none;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:12px;padding:1rem;color:#dc2626;font-size:0.87rem;margin-top:0.5rem}
+.form-note{font-size:0.78rem;color:var(--text-light);text-align:center;margin-top:0.8rem;display:flex;align-items:center;justify-content:center;gap:0.4rem}
+.form-note i{color:var(--orange);font-size:0.75rem}
+/* MAP */
+#map-section{background:var(--white);padding:4rem 0 5rem}
+.map-wrap{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);height:420px}
+.map-wrap iframe{width:100%;height:100%;border:none}
+/* FAQ */
+#faq{background:var(--section-bg)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.faq-item{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color var(--tr)}
+.faq-item.open{border-color:rgba(249,115,22,0.35)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 1.5rem;cursor:pointer;gap:1rem;user-select:none}
+.faq-q span{font-family:'Syne',sans-serif;font-weight:600;font-size:0.95rem;color:var(--text)}
+.faq-q i{color:var(--orange);flex-shrink:0;transition:transform 0.3s;font-size:0.85rem}
+.faq-item.open .faq-q i{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s}
+.faq-a p{padding:0 1.5rem 1.2rem;color:var(--text-light);font-size:0.9rem;line-height:1.75}
+.faq-item.open .faq-a{max-height:200px}
+/* TESTI STRIP */
+#testi-strip{background:var(--navy);padding:4.5rem 0;position:relative;overflow:hidden}
+#testi-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50%,rgba(249,115,22,0.06),transparent 60%)}
+.testi-strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;position:relative;z-index:1}
+.ts-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius);padding:1.8rem;transition:all var(--tr)}
+.ts-card:hover{background:rgba(249,115,22,0.08);border-color:rgba(249,115,22,0.2);transform:translateY(-4px)}
+.ts-stars{color:var(--orange);font-size:0.85rem;letter-spacing:2px;margin-bottom:0.8rem}
+.ts-text{color:rgba(255,255,255,0.6);font-size:0.9rem;line-height:1.7;font-style:italic;margin-bottom:1.2rem}
+.ts-author{display:flex;align-items:center;gap:0.7rem}
+.ts-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--orange),#b45309);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Syne',sans-serif;font-size:0.9rem;flex-shrink:0}
+.ts-name{color:#fff;font-weight:600;font-size:0.88rem}
+.ts-loc{color:rgba(255,255,255,0.4);font-size:0.78rem}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}.faq-grid{grid-template-columns:1fr}.quick-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.nav-links,.nav-actions .btn-cta-nav,.nav-actions .btn-dark{display:none}.hamburger{display:flex}section{padding:4rem 0}.contact-layout{grid-template-columns:1fr}.testi-strip-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="navbar"><div class="nav-inner"><a href="index.html" class="logo">JL<em>Tiling</em></a><ul class="nav-links"><li><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a></li><li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm">Nosotros</a></li><li><a href="services.html" data-es="Servicios" data-ht="Sèvis">Servicios</a></li><li><a href="galerie.html" data-es="Galería" data-ht="Galri">Galería</a></li><li><a href="contact.html" class="active" data-es="Contacto" data-ht="Kontakte">Contacto</a></li></ul><div class="nav-actions"><button class="btn-dark" id="darkToggle"><i class="fas fa-moon"></i></button><button class="btn-lang" id="langToggle">🇭🇹 Kreyòl</button><a href="#contact-main" class="btn-cta-nav" data-es="Cotización gratis" data-ht="Devis gratis">Cotización gratis</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></div></nav>
+<div class="mobile-menu" id="mobileMenu"><button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button><ul><li><a href="index.html" data-es="Inicio" data-ht="Akèy" onclick="closeMobile()">Inicio</a></li><li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm" onclick="closeMobile()">Nosotros</a></li><li><a href="services.html" data-es="Servicios" data-ht="Sèvis" onclick="closeMobile()">Servicios</a></li><li><a href="galerie.html" data-es="Galería" data-ht="Galri" onclick="closeMobile()">Galería</a></li><li><a href="contact.html" class="active" data-es="Contacto" data-ht="Kontakte" onclick="closeMobile()">Contacto</a></li></ul><div class="mobile-actions"><button class="btn-lang" id="langToggleMobile">🇭🇹 Kreyòl</button><a href="#contact-main" class="btn-primary" onclick="closeMobile()">Cotización gratis</a></div></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero"><div class="page-hero-grid"></div><div class="page-hero-content"><div class="breadcrumb"><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a><span class="sep">›</span><span data-es="Contacto" data-ht="Kontakte">Contacto</span></div><h1 data-es="Hablemos de tu <em>Proyecto</em>" data-ht="Ann pale sou <em>Pwojè</em> ou">Hablemos de tu <em>Proyecto</em></h1><p data-es="Cotización gratuita, respuesta garantizada en menos de 24 horas. Sin compromiso." data-ht="Devis gratis, repons garanti nan mwens pase 24 èdtan. San angajman.">Cotización gratuita, respuesta garantizada en menos de 24 horas. Sin compromiso.</p></div></div>
+
+<!-- QUICK STRIP -->
+<div id="quick-contact">
+  <div class="container">
+    <div class="quick-grid">
+      <a href="tel:+50940894038" class="quick-item">
+        <i class="fas fa-phone"></i>
+        <div class="quick-item-text"><div class="quick-item-label" data-es="Llamar ahora" data-ht="Rele koulye a">Llamar ahora</div><div class="quick-item-value">+509 4089 4038</div></div>
+      </a>
+      <a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." target="_blank" class="quick-item">
+        <i class="fab fa-whatsapp"></i>
+        <div class="quick-item-text"><div class="quick-item-label" data-es="WhatsApp directo" data-ht="WhatsApp dirèk">WhatsApp directo</div><div class="quick-item-value" data-es="Mensaje automático" data-ht="Mesaj otomatik">Mensaje automático</div></div>
+      </a>
+      <a href="mailto:juntanluyis@gmail.com" class="quick-item">
+        <i class="fas fa-envelope"></i>
+        <div class="quick-item-text"><div class="quick-item-label" data-es="Correo electrónico" data-ht="Imèl">Correo electrónico</div><div class="quick-item-value">juntanluyis@gmail.com</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTACT -->
+<section id="contact-main">
+  <div class="container">
+    <div class="contact-layout">
+      <!-- INFO -->
+      <div class="contact-info-block reveal-l">
+        <div>
+          <span class="section-tag" data-es="Información de contacto" data-ht="Enfòmasyon kontak">Información de contacto</span>
+          <h2 class="section-title" data-es="Estamos <span>disponibles</span> para ti" data-ht="Nou <span>disponib</span> pou ou">Estamos <span>disponibles</span> para ti</h2>
+          <div class="divider"></div>
+          <p style="color:var(--text-light);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem" data-es="Contáctanos por el medio que prefieras. Respondemos con rapidez y con toda la información que necesitas para iniciar tu proyecto." data-ht="Kontakte nou pa mwayen ou prefere. Nou reponn rapid ak tout enfòmasyon ou bezwen pou kòmanse pwojè ou.">Contáctanos por el medio que prefieras. Respondemos con rapidez y con toda la información que necesitas para iniciar tu proyecto.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-phone"></i></div>
+          <div><div class="info-label" data-es="Teléfono" data-ht="Telefòn">Teléfono</div><div class="info-value"><a href="tel:+50940894038">+509 4089 4038</a></div><div class="info-sub" data-es="Llamadas y WhatsApp" data-ht="Apèl ak WhatsApp">Llamadas y WhatsApp</div></div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div><div class="info-label" data-es="Correo electrónico" data-ht="Imèl">Correo electrónico</div><div class="info-value"><a href="mailto:juntanluyis@gmail.com">juntanluyis@gmail.com</a></div><div class="info-sub" data-es="Respondemos en 24h" data-ht="Nou reponn nan 24h">Respondemos en 24h</div></div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div><div class="info-label" data-es="Horario de atención" data-ht="Orè travay">Horario de atención</div><div class="info-value" data-es="Lunes a Sábado: 7:00 AM – 7:00 PM" data-ht="Lendi rive Samdi: 7:00 AM – 7:00 PM">Lunes a Sábado: 7:00 AM – 7:00 PM</div><div class="info-sub" data-es="Respuesta WhatsApp: 7 días" data-ht="Repons WhatsApp: 7 jou">Respuesta WhatsApp: 7 días</div></div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><div class="info-label" data-es="Zona de servicio" data-ht="Zòn sèvis">Zona de servicio</div><div class="info-value" data-es="República Dominicana" data-ht="Repiblik Dominikèn">República Dominicana</div><div class="info-sub" data-es="Santo Domingo, Santiago y más" data-ht="Santo Domingo, Santiago ak plis">Santo Domingo, Santiago y más</div></div>
+        </div>
+        <a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="wa-big-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          <div class="wa-big-text"><span class="wa-big-label" data-es="Escribir por" data-ht="Ekri pa">Escribir por</span><span class="wa-big-value">WhatsApp</span></div>
+        </a>
+        <div>
+          <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:0.7rem;text-transform:uppercase;letter-spacing:0.5px;font-weight:600" data-es="Síguenos en redes sociales" data-ht="Swiv nou sou rezo sosyal">Síguenos en redes sociales</p>
+          <div class="social-row">
+            <a href="#" class="soc-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="soc-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/50940894038" class="soc-btn" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- FORM -->
+      <div class="form-card reveal-r">
+        <div class="form-card-title" data-es="Solicitar Cotización Gratuita" data-ht="Mande Devis Gratis">Solicitar Cotización Gratuita</div>
+        <div class="form-card-sub" data-es="Completa el formulario y te contactamos en menos de 24 horas." data-ht="Ranpli fòm nan ak nou kontakte ou nan mwens pase 24 èdtan.">Completa el formulario y te contactamos en menos de 24 horas.</div>
+        <form id="contactForm" novalidate autocomplete="off">
+          <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-es="Nombre completo *" data-ht="Non konplè *">Nombre completo *</label>
+              <input type="text" name="name" id="fname" placeholder="Juan Rodríguez" required minlength="2">
+            </div>
+            <div class="form-group">
+              <label data-es="Teléfono / WhatsApp *" data-ht="Telefòn / WhatsApp *">Teléfono / WhatsApp *</label>
+              <input type="tel" name="phone" id="fphone" placeholder="+1 809 000 0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-es="Correo electrónico *" data-ht="Imèl *">Correo electrónico *</label>
+            <input type="email" name="email" id="femail" placeholder="correo@ejemplo.com" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-es="Tipo de servicio *" data-ht="Kalite sèvis *">Tipo de servicio *</label>
+              <select name="service" id="fservice" required>
+                <option value="" data-es="Seleccionar..." data-ht="Chwazi...">Seleccionar...</option>
+                <option value="ceramica" data-es="Instalación de Cerámica" data-ht="Enstale Seramik">Instalación de Cerámica</option>
+                <option value="sheetrock" data-es="Instalación de Sheetrock" data-ht="Enstale Sheetrock">Instalación de Sheetrock</option>
+                <option value="remodelacion" data-es="Remodelación Interior" data-ht="Renovasyon Enteryè">Remodelación Interior</option>
+                <option value="pisos" data-es="Reparación de Pisos" data-ht="Reparasyon Atè">Reparación de Pisos</option>
+                <option value="comercial" data-es="Trabajo Comercial" data-ht="Travay Komèsyal">Trabajo Comercial</option>
+                <option value="otro" data-es="Otro servicio" data-ht="Lòt sèvis">Otro servicio</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-es="Tamaño aproximado" data-ht="Gwosè apwoksymatif">Tamaño aproximado</label>
+              <select name="size">
+                <option value="" data-es="Seleccionar..." data-ht="Chwazi...">Seleccionar...</option>
+                <option value="small" data-es="Pequeño (hasta 30m²)" data-ht="Piti (jiska 30m²)">Pequeño (hasta 30m²)</option>
+                <option value="medium" data-es="Mediano (30–100m²)" data-ht="Mwayèn (30–100m²)">Mediano (30–100m²)</option>
+                <option value="large" data-es="Grande (más de 100m²)" data-ht="Gwo (plis pase 100m²)">Grande (más de 100m²)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-es="Ubicación del proyecto" data-ht="Kote pwojè a">Ubicación del proyecto</label>
+            <input type="text" name="location" id="flocation" placeholder="Santo Domingo, Santiago...">
+          </div>
+          <div class="form-group">
+            <label data-es="Descripción del proyecto *" data-ht="Deskripsyon pwojè a *">Descripción del proyecto *</label>
+            <textarea name="message" id="fmessage" placeholder="Describe tu proyecto: tipo de trabajo, materiales, fechas estimadas..." required minlength="10"></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> <span data-es="Enviar solicitud" data-ht="Voye demann">Enviar solicitud</span>
+          </button>
+          <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i><span data-es="¡Solicitud enviada con éxito! Jonathan te contactará pronto." data-ht="Demann voye avèk siksè! Jonathan ap kontakte ou byento.">¡Solicitud enviada con éxito! Jonathan te contactará pronto.</span></div>
+          <div class="form-error" id="formError"></div>
+          <p class="form-note"><i class="fas fa-lock"></i> <span data-es="Tu información es privada y nunca será compartida." data-ht="Enfòmasyon ou prive ak pa janm pataje.">Tu información es privada y nunca será compartida.</span></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section id="map-section">
+  <div class="container">
+    <div class="section-header center" style="margin-bottom:2rem">
+      <span class="section-tag reveal" data-es="Nuestra ubicación" data-ht="Kote nou ye">Nuestra ubicación</span>
+      <h2 class="section-title reveal" data-es="Área de <span>Cobertura</span>" data-ht="Zòn <span>Kouvèti</span>">Área de <span>Cobertura</span></h2>
+      <div class="divider center reveal"></div>
+      <p class="section-sub reveal" data-es="Servicio disponible en toda la República Dominicana. Contáctanos para confirmar disponibilidad en tu zona." data-ht="Sèvis disponib nan tout Repiblik Dominikèn. Kontakte nou pou konfime disponibilite nan zòn ou.">Servicio disponible en toda la República Dominicana. Contáctanos para confirmar disponibilidad en tu zona.</p>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241234.29849813!2d-70.0517!3d18.4861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea561c9a7251611%3A0x6b6e81e5f88e7c49!2sSanto+Domingo!5e0!3m2!1ses!2sdo!4v1700000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="JLTiling - Santo Domingo"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag reveal" data-es="Preguntas frecuentes" data-ht="Kesyon yo poze souvan">Preguntas frecuentes</span>
+      <h2 class="section-title reveal" data-es="Todo lo que <span>necesitas saber</span>" data-ht="Tout sa ou <span>bezwen konnen</span>">Todo lo que <span>necesitas saber</span></h2>
+      <div class="divider center reveal"></div>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <div class="faq-q"><span data-es="¿La cotización es realmente gratuita?" data-ht="Èske devis la vrèman gratis?">¿La cotización es realmente gratuita?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p data-es="Sí, 100% gratuita y sin ningún compromiso. Visitamos tu proyecto, evaluamos y te presentamos un presupuesto detallado completamente sin costo." data-ht="Wi, 100% gratis ak san okenn angajman. Nou vizite pwojè ou, evalye ak prezante yon bidjè detaye nèt gratis.">Sí, 100% gratuita y sin ningún compromiso. Visitamos tu proyecto, evaluamos y te presentamos un presupuesto detallado completamente sin costo.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span data-es="¿Cuánto tiempo tarda un proyecto típico?" data-ht="Ki tan yon pwojè tipik pran?">¿Cuánto tiempo tarda un proyecto típico?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p data-es="Depende del tamaño: un baño pequeño puede tomar 2-3 días. Un apartamento completo entre 1-3 semanas. Siempre acordamos el plazo antes de comenzar." data-ht="Depann de gwosè: yon ti saldeben ka pran 2-3 jou. Yon appatman konplè ant 1-3 semèn. Nou toujou konvni delè anvan kòmanse.">Depende del tamaño: un baño pequeño puede tomar 2-3 días. Un apartamento completo entre 1-3 semanas. Siempre acordamos el plazo antes de comenzar.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span data-es="¿Proveen los materiales o solo la mano de obra?" data-ht="Èske yo bay materyèl oswa sèlman men-d-oeuvre?">¿Proveen los materiales o solo la mano de obra?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p data-es="Ofrecemos ambas opciones. Podemos proveer materiales de calidad a precios competitivos, o trabajar con materiales que el cliente proporcione. Siempre con transparencia total." data-ht="Nou ofri tou de opsyon yo. Nou ka bay materyèl kalite ak pri konpetitif, oswa travay ak materyèl kliyan an bay. Toujou ak transparan total.">Ofrecemos ambas opciones. Podemos proveer materiales de calidad a precios competitivos, o trabajar con materiales que el cliente proporcione. Siempre con transparencia total.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span data-es="¿Garantizan su trabajo?" data-ht="Èske yo garanti travay yo?">¿Garantizan su trabajo?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p data-es="Sí. Ofrecemos garantía de mano de obra en todos los proyectos. Si algo no cumple con los estándares acordados, regresamos y lo corregimos sin costo adicional." data-ht="Wi. Nou ofri garanti men-d-oeuvre nan tout pwojè yo. Si yon bagay pa respekte estanda yo konvni, nou retounen kòrije l san kout siplemantè.">Sí. Ofrecemos garantía de mano de obra en todos los proyectos. Si algo no cumple con los estándares acordados, regresamos y lo corregimos sin costo adicional.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span data-es="¿Trabajan fuera de Santo Domingo?" data-ht="Èske yo travay deyò Santo Domingo?">¿Trabajan fuera de Santo Domingo?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p data-es="Sí, trabajamos en toda la República Dominicana incluyendo Santiago, La Romana, San Pedro de Macorís, Puerto Plata y más. Contáctanos para confirmar disponibilidad." data-ht="Wi, nou travay nan tout Repiblik Dominikèn enkli Santiago, La Romana, San Pedro de Macorís, Puerto Plata ak plis. Kontakte nou pou konfime disponibilite.">Sí, trabajamos en toda la República Dominicana incluyendo Santiago, La Romana, San Pedro de Macorís, Puerto Plata y más.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><span data-es="¿Cuál es la forma de pago?" data-ht="Ki jan pou peye?">¿Cuál es la forma de pago?</span><i class="fas fa-plus"></i></div>
+        <div class="faq-a"><p data-es="Aceptamos efectivo y transferencia bancaria. Generalmente se acuerda un adelanto al inicio del proyecto y el resto al finalizar. Siempre con toda la transparencia." data-ht="Nou aksepte lajan kach ak virement bankè. Jeneralman yon avans akòde nan kòmansman pwojè a ak rès la nan finisman. Toujou ak tout transparan.">Aceptamos efectivo y transferencia bancaria. Generalmente se acuerda un adelanto al inicio del proyecto y el resto al finalizar.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS STRIP -->
+<section id="testi-strip">
+  <div class="container">
+    <div class="section-header center" style="margin-bottom:2.5rem">
+      <span class="section-tag reveal" style="color:var(--orange)" data-es="Clientes satisfechos" data-ht="Kliyan satisfè">Clientes satisfechos</span>
+      <h2 class="section-title reveal" style="color:#fff" data-es="Ellos ya <span>confiaron</span> en nosotros" data-ht="Yo deja <span>fè konfyans</span> nan nou">Ellos ya <span>confiaron</span> en nosotros</h2>
+      <div class="divider center reveal"></div>
+    </div>
+    <div class="testi-strip-grid">
+      <div class="ts-card reveal"><div class="ts-stars">★★★★★</div><p class="ts-text" data-es='"Excelente trabajo y terminación impecable. Muy detallistas y profesionales. Totalmente recomendados."' data-ht='"Travay ekselan ak finisman ireprochab. Trè detayis ak pwofesyonèl. Konplètman rekòmande."'>"Excelente trabajo y terminación impecable. Muy detallistas y profesionales. Totalmente recomendados."</p><div class="ts-author"><div class="ts-avatar">M</div><div><div class="ts-name">María González</div><div class="ts-loc">Santo Domingo</div></div></div></div>
+      <div class="ts-card reveal"><div class="ts-stars">★★★★★</div><p class="ts-text" data-es='"Muy responsable y profesional. Cumplió con el tiempo y precio acordado. El resultado superó mis expectativas."' data-ht='"Trè responsab ak pwofesyonèl. Li respekte tan ak pri konvni. Rezilta a depase espektatif mwen."'>"Muy responsable y profesional. Cumplió con el tiempo y precio acordado. El resultado superó mis expectativas."</p><div class="ts-author"><div class="ts-avatar">C</div><div><div class="ts-name">Carlos Martínez</div><div class="ts-loc">Santiago</div></div></div></div>
+      <div class="ts-card reveal"><div class="ts-stars">★★★★★</div><p class="ts-text" data-es='"Lo recomiendo al 100%. Instaló toda la cerámica y el Sheetrock de mi casa. Trabajo impecable a buen precio."' data-ht='"Mwen rekòmande l 100%. Li enstale tout seramik ak Sheetrock nan kay mwen. Travay ireprochab ak bon pri."'>"Lo recomiendo al 100%. Instaló toda la cerámica y el Sheetrock de mi casa. Trabajo impecable a buen precio."</p><div class="ts-author"><div class="ts-avatar">A</div><div><div class="ts-name">Ana Pérez</div><div class="ts-loc">La Romana</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-grid"><div><a href="index.html" class="footer-logo">JL<em>Tiling</em></a><p class="footer-desc" data-es="Jonathan Louis — Servicios profesionales de Cerámica y Sheetrock en República Dominicana." data-ht="Jonathan Louis — Sèvis pwofesyonèl Seramik ak Sheetrock nan Repiblik Dominikèn.">Jonathan Louis — Servicios profesionales de Cerámica y Sheetrock en República Dominicana.</p><div class="footer-social"><a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-btn"><i class="fab fa-instagram"></i></a><a href="https://wa.me/50940894038" class="social-btn" target="_blank"><i class="fab fa-whatsapp"></i></a></div></div><div class="footer-col"><h4 data-es="Páginas" data-ht="Paj yo">Páginas</h4><ul class="footer-links"><li><a href="index.html" data-es="Inicio" data-ht="Akèy">Inicio</a></li><li><a href="apropos.html" data-es="Nosotros" data-ht="Nou menm">Nosotros</a></li><li><a href="services.html" data-es="Servicios" data-ht="Sèvis">Servicios</a></li><li><a href="galerie.html" data-es="Galería" data-ht="Galri">Galería</a></li><li><a href="contact.html" data-es="Contacto" data-ht="Kontakte">Contacto</a></li></ul></div><div class="footer-col"><h4 data-es="Servicios" data-ht="Sèvis">Servicios</h4><ul class="footer-links"><li><a href="services.html">Cerámica</a></li><li><a href="services.html">Sheetrock</a></li><li><a href="services.html" data-es="Remodelación" data-ht="Renovasyon">Remodelación</a></li><li><a href="services.html" data-es="Reparaciones" data-ht="Reparasyon">Reparaciones</a></li></ul></div><div class="footer-col"><h4 data-es="Contacto" data-ht="Kontakte">Contacto</h4><ul class="footer-links"><li><a href="tel:+50940894038"><i class="fas fa-phone"></i> +509 4089 4038</a></li><li><a href="mailto:juntanluyis@gmail.com"><i class="fas fa-envelope"></i> juntanluyis@gmail.com</a></li><li><a href="#map-section"><i class="fas fa-map-marker-alt"></i> <span data-es="República Dominicana" data-ht="Repiblik Dominikèn">República Dominicana</span></a></li></ul></div></div><div class="footer-bottom"><p>© 2026 <a href="index.html">JLtiling</a> — <span data-es="Todos los derechos reservados." data-ht="Tout dwa rezève.">Todos los derechos reservados.</span></p><p><a href="https://jltiling.work">jltiling.work</a></p></div></div></footer>
+<a href="https://wa.me/50940894038?text=Hola%20Jonathan%2C%20necesito%20una%20cotizaci%C3%B3n%20para%20un%20trabajo." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+let lang=localStorage.getItem('jl_lang')||'es';
+function applyLang(l){lang=l;localStorage.setItem('jl_lang',l);document.querySelectorAll('[data-es]').forEach(el=>{const v=el.getAttribute('data-'+l);if(!v)return;if(el.tagName==='INPUT'||el.tagName==='TEXTAREA'){el.placeholder=v;return;}if(el.tagName==='OPTION'){el.textContent=v;return;}el.innerHTML=v;});['langToggle','langToggleMobile'].forEach(id=>{const b=document.getElementById(id);if(b)b.textContent=l==='es'?'🇭🇹 Kreyòl':'🇩🇴 Español';});}
+['langToggle','langToggleMobile'].forEach(id=>{const b=document.getElementById(id);if(b)b.addEventListener('click',()=>applyLang(lang==='es'?'ht':'es'));});
+applyLang(lang);
+const dt=document.getElementById('darkToggle');const st=localStorage.getItem('jl_theme')||'light';document.documentElement.setAttribute('data-theme',st);if(dt){dt.innerHTML=st==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>';dt.addEventListener('click',()=>{const d=document.documentElement.getAttribute('data-theme')==='dark';document.documentElement.setAttribute('data-theme',d?'light':'dark');localStorage.setItem('jl_theme',d?'light':'dark');dt.innerHTML=d?'<i class="fas fa-moon"></i>':'<i class="fas fa-sun"></i>';});}
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);const bt=document.getElementById('backTop');if(bt)bt.classList.toggle('visible',window.scrollY>400);});
+document.getElementById('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click',()=>closeMobile());
+function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
+// FAQ
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  });
+});
+// FORM
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('formError').style.display='none';
+  if(this.querySelector('[name="_honey"]').value)return;
+  const name=document.getElementById('fname').value.trim();
+  const phone=document.getElementById('fphone').value.trim();
+  const email=document.getElementById('femail').value.trim();
+  const service=document.getElementById('fservice').value;
+  const message=document.getElementById('fmessage').value.trim();
+  const emailReg=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let err='';
+  if(!name||name.length<2) err=lang==='es'?'Por favor ingresa tu nombre completo.':'Tanpri antre non konplè ou.';
+  else if(!phone||phone.length<7) err=lang==='es'?'Por favor ingresa un teléfono válido.':'Tanpri antre yon telefòn valid.';
+  else if(!email||!emailReg.test(email)) err=lang==='es'?'Por favor ingresa un correo válido.':'Tanpri antre yon imèl valid.';
+  else if(!service) err=lang==='es'?'Por favor selecciona un tipo de servicio.':'Tanpri chwazi yon kalite sèvis.';
+  else if(!message||message.length<10) err=lang==='es'?'Por favor describe tu proyecto (mínimo 10 caracteres).':'Tanpri dekri pwojè ou (minimòm 10 karaktè).';
+  if(err){const el=document.getElementById('formError');el.textContent=err;el.style.display='block';return;}
+  const loc=document.getElementById('flocation').value.trim();
+  const msg=`Hola Jonathan, soy ${name}. Necesito cotización para: ${service}. ${loc?'Ubicación: '+loc+'. ':''}${message}`;
+  const wa=`https://wa.me/50940894038?text=${encodeURIComponent(msg)}`;
+  window.open(wa,'_blank');
+  const btn=document.getElementById('submitBtn');
+  btn.disabled=true;
+  document.getElementById('formSuccess').style.display='block';
+  this.reset();
+  setTimeout(()=>{document.getElementById('formSuccess').style.display='none';btn.disabled=false;},6000);
+});
+const obs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');obs.unobserve(en.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach((el,i)=>{el.style.transitionDelay=Math.min(i%5*0.09,0.45)+'s';obs.observe(el);});
+</script>
+</body></html>
